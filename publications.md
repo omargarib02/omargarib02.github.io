@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: single
 title: Publications
 permalink: /publications/
 ---
@@ -8,7 +8,7 @@ permalink: /publications/
 
 1. **O. Garib**, J. D. Kambhampaty, O. J. Pinon Fischer, D. N. Mavris.  
    *AIRHILT: A Human‑in‑the‑Loop Testbed for Multimodal Conflict Detection in Aviation.*  
-   IEEE Int. Conf. on Robotics and Automation (ICRA), **in submission**.  
+   IEEE International Conference on Robotics and Automation (ICRA), **in submission**.  
    [Project](/research/#airhilt) · PDF (coming soon)
 
 2. **O. Garib**, M. Ghanem, O. J. Pinon Fischer, D. N. Mavris.  
