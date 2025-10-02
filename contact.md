@@ -6,4 +6,4 @@ permalink: /contact/
 
 - **Email**: [ogarib@gatech.edu](mailto:ogarib@gatech.edu)  
 - **LinkedIn**: [linkedin.com/in/omargarib](https://www.linkedin.com/in/omargarib/)  
-- **GitHub**: [github.com/your-username](https://github.com/your-username)
+- **GitHub**: [github.com/omargarib02](https://github.com/omargarib02)
