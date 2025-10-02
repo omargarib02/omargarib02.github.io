@@ -1,4 +1,4 @@
-title: Omar Garib
+title: Home Page
 description: Multimodal intelligent systems · human-in-the-loop autonomy · speech/vision/3D reasoning · social & assistive robotics
 url: https://omargarib02.github.io
 lang: en
@@ -47,7 +47,7 @@ defaults:
       author_profile: false
       comments: false
 
-  # Enable author sidebar + News for all pages by default
+  # Enable author sidebar + News for all pages
   - scope:
       path: ""
       type: pages
