@@ -3,300 +3,81 @@
 @import "minimal-mistakes/skins/contrast";
 @import "minimal-mistakes";
 
-/* ==================== Typographic scale ==================== */
-html { font-size: 16px; }  /* Increased from 15px for better readability at 100% zoom */
-.site-nav .page-link { font-size: 0.95rem; }
-.page__title { font-size: 1.75rem; }
-h2 { font-size: 1.35rem; }
-h3 { font-size: 1.15rem; }
-.page__content p { line-height: 1.6; font-size: 1rem; }
+/* ---------- Type scale ---------- */
+html { font-size: 15px; }
+.site-nav .page-link { font-size: 0.92rem; }
+.page__title { font-size: 1.6rem; }
+h2 { font-size: 1.22rem; }
+h3 { font-size: 1.08rem; }
+.page__content p { line-height: 1.55; }
 
 /* Links */
 a { text-decoration: underline; text-underline-offset: 2px; }
 a:hover { text-decoration: none; }
 .page__content img { border-radius: 6px; }
 
-/* ==================== Three Column Layout Fix ==================== */
-/* Override minimal-mistakes default layout */
-.layout--single {
+/* ---------- Sidebar (left column) ---------- */
+.sidebar { flex: 0 0 380px !important; max-width: 380px !important; padding: 0 !important; }
+.sidebar__inner { padding: 0 20px !important; }
+.sidebar .author { text-align: center !important; }
+.sidebar .author__avatar { width: calc(100% - 40px) !important; max-width: 340px !important; margin: 20px auto 25px !important; border-radius: 0 !important; overflow: hidden !important; }
+.sidebar .author__avatar img { width: 100% !important; height: auto !important; border-radius: 12px !important; object-fit: cover !important; }
+.sidebar .author__avatar:before, .sidebar .author__avatar:after { display: none !important; }
+.sidebar .author__name { font-size: 1.5rem !important; font-weight: 700 !important; margin: 0 0 0.75rem 0 !important; }
+
+/* ---------- Page container width ---------- */
+.layout--single { max-width: 1280px !important; margin: 0 auto !important; padding: 2rem !important; }
+@media (max-width: 768px){ .layout--single { padding: 1rem !important; } }
+
+/* ===========================================================
+   CENTER + RIGHT GRID (inside .page__content)
+   Strong selectors + !important to beat any incidental styles
+   =========================================================== */
+.page .page__content > .home-grid {        /* ensure the wrapper is the grid */
   display: grid !important;
-  grid-template-columns: 320px 1fr !important;  /* Sidebar | Main content area */
-  gap: 2.5rem !important;
-  max-width: 1400px !important;
-  margin: 0 auto !important;
-  padding: 2rem !important;
+  grid-template-columns: minmax(520px, 54%) minmax(360px, 1fr) !important; /* center / right */
+  gap: 2rem !important;
+  align-items: start !important;
+}
+.home-grid__main  { min-width: 0 !important; }
+.home-grid__aside { min-width: 0 !important; }
+
+/* slightly narrower center on very wide screens */
+@media (min-width: 1400px){
+  .page .page__content > .home-grid {
+    grid-template-columns: minmax(520px, 52%) minmax(420px, 1fr) !important;
+  }
 }
 
-/* ==================== Sidebar (left column) ==================== */
-.sidebar {
-  position: sticky !important;
-  top: 2rem !important;
-  height: fit-content !important;
-  width: 100% !important;
-  max-width: none !important;
-  flex: none !important;
-  padding: 0 !important;
-  overflow-x: visible !important;
-  float: none !important;
-  clear: none !important;
+/* stack on small screens */
+@media (max-width: 1100px){
+  .page .page__content > .home-grid { grid-template-columns: 1fr !important; }
 }
 
-.sidebar__right {
-  position: sticky !important;
-  float: none !important;
-  top: 2rem !important;
-  right: auto !important;
-  width: 100% !important;
-  margin: 0 !important;
-  padding: 0 !important;
-  clear: none !important;
-}
-
-.sidebar__inner { 
-  padding: 0 !important; 
-  width: 100% !important; 
-  box-sizing: border-box !important; 
-}
-
-.sidebar .author { 
-  text-align: center !important; 
-  margin: 0 !important; 
-  padding: 0 !important; 
-}
-
-/* Profile Picture - Increased size by 30% and straight edges */
-.sidebar .author__avatar {
-  display: block !important;
-  width: 100% !important;
-  max-width: 320px !important;  /* Increased from ~260px (30% larger) */
-  height: auto !important;
-  margin: 0 auto 25px auto !important;
-  border-radius: 0 !important;  /* Straight edges */
-  overflow: hidden !important;
-}
-
-.sidebar .author__avatar img {
-  width: 100% !important; 
-  height: auto !important;
-  object-fit: cover !important; 
-  object-position: center !important;
-  border-radius: 0 !important;  /* Straight edges */
-  display: block !important;
-  opacity: 1 !important;  /* Always full contrast */
-  filter: none !important;  /* No filter effects */
-}
-
-/* Remove any hover effects on avatar */
-.sidebar .author__avatar:hover img {
-  opacity: 1 !important;
-  filter: none !important;
-}
-
-.sidebar .author__avatar:before,
-.sidebar .author__avatar:after { 
-  display: none !important; 
-}
-
-.sidebar .author__name {
-  font-size: 1.6rem !important; 
-  font-weight: 700 !important;
-  margin: 0 0 0.75rem 0 !important; 
-  line-height: 1.2 !important;
-}
-
-.sidebar .author__urls-wrapper {
-  width: 100% !important; 
-  margin: 1.5rem 0 !important; 
-  padding: 0 !important;
-  text-align: center !important; 
-  border-top: 1px solid #e0e0e0 !important; 
-  padding-top: 1.5rem !important;
-}
-
-.sidebar .author__urls { 
-  list-style: none !important; 
-  padding: 0 !important; 
-  margin: 0 !important; 
-}
-
-.sidebar .author__urls li { 
-  margin: 0.5rem 0 !important; 
-}
-
-/* News section in sidebar */
-.sidebar h3 { 
-  font-size: 1.15rem !important; 
-  font-weight: 600 !important; 
-  margin: 2rem 0 1rem 0 !important; 
-  color: #222 !important; 
-}
-
-/* ================== Main content area (center + right columns) ================== */
-.initial-content {
-  grid-column: 2 !important;  /* Place in second grid column */
-  min-width: 0 !important;  /* Prevent overflow */
-  max-width: 100% !important;
-  margin: 0 !important;
-  padding: 0 !important;
-}
-
-/* Two-column grid within main content area */
-.content-columns {
-  display: grid;
-  grid-template-columns: 1.2fr 1fr;  /* Center column slightly wider than right */
-  gap: 2.5rem;
-  align-items: start;
-  width: 100%;
-}
-
-.content-columns__main { 
-  min-width: 0; 
-}
-
-.content-columns__aside { 
-  min-width: 0;
-}
-
-/* ================== Featured-research cards ================== */
-.research-card {
+/* ---------- Featured-research cards ---------- */
+.research-card{
   border: 1px solid #e0e0e0;
   border-radius: 8px;
-  padding: 1.25rem;
+  padding: 1rem;
   box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-  transition: box-shadow .2s ease-in-out, transform .2s ease-in-out;
-  margin-bottom: 1.5rem;
+  transition: box-shadow .2s ease, transform .2s ease;
+  margin-bottom: 1.25rem;
+}
+.research-card:hover{ box-shadow: 0 4px 12px rgba(0,0,0,0.1); transform: translateY(-2px); }
+.research-card img{ width: 100%; border-radius: 6px; margin-bottom: .75rem; }
+.research-card h4{ margin: 0 0 .5rem 0; font-size: 1.1rem; }
+.research-card p{ font-size: .93rem; line-height: 1.5; margin: 0 0 1rem 0; }
+
+/* ---------- Buttons: keep green ---------- */
+.btn--primary{
+  background-color:#16a34a !important; border-color:#16a34a !important; color:#fff !important;
+  font-weight:500 !important; padding:.5rem 1.25rem !important; border-radius:4px !important;
+}
+.btn--primary:hover{
+  background:#0f8a3b !important; border-color:#0f8a3b !important; box-shadow:0 4px 8px rgba(22,163,74,.2) !important;
 }
 
-.research-card:hover { 
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1); 
-  transform: translateY(-2px); 
-}
-
-.research-card img { 
-  width: 100%; 
-  border-radius: 6px; 
-  margin-bottom: 1rem; 
-}
-
-.research-card h4 { 
-  margin: 0 0 .6rem 0; 
-  font-size: 1.15rem; 
-}
-
-.research-card p { 
-  font-size: 0.95rem; 
-  line-height: 1.55; 
-  margin: 0 0 1.1rem 0; 
-}
-
-/* ================== Buttons ================== */
-.btn--primary {
-  background-color: #16a34a !important; 
-  border-color: #16a34a !important; 
-  color: #fff !important;
-  font-weight: 500 !important; 
-  padding: .55rem 1.3rem !important; 
-  border-radius: 4px !important;
-  display: inline-block !important;
-  text-decoration: none !important;
-  font-size: 0.95rem !important;
-}
-
-.btn--primary:hover { 
-  background: #0f8a3b !important; 
-  border-color: #0f8a3b !important; 
-  box-shadow: 0 4px 8px rgba(22,163,74,.2) !important; 
-}
-
-/* ================== Responsive breakpoints ================== */
-@media (max-width: 1200px) {
-  .layout--single {
-    grid-template-columns: 280px 1fr !important;
-    gap: 2rem !important;
-  }
-  
-  .sidebar .author__avatar {
-    max-width: 280px !important;
-  }
-}
-
-@media (max-width: 1024px) {
-  .layout--single {
-    grid-template-columns: 1fr !important;  /* Stack vertically */
-    gap: 0 !important;
-  }
-  
-  .sidebar {
-    position: static !important;
-    margin-bottom: 2rem !important;
-  }
-  
-  .sidebar__right {
-    position: static !important;
-  }
-  
-  .content-columns {
-    grid-template-columns: 1fr;  /* Stack center and right columns */
-  }
-}
-
-@media (max-width: 768px) { 
-  .layout--single { 
-    padding: 1rem !important; 
-  }
-  
-  html { 
-    font-size: 15px; 
-  }
-}
-
-/* ================== Table styling ================== */
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 1rem 0;
-  font-size: 0.95rem;
-}
-
-table th {
-  background-color: #f5f5f5;
-  font-weight: 600;
-  text-align: left;
-  padding: 0.75rem;
-  border-bottom: 2px solid #ddd;
-}
-
-table td {
-  padding: 0.6rem 0.75rem;
-  border-bottom: 1px solid #eee;
-}
-
-table tbody tr:hover {
-  background-color: #f9f9f9;
-}
-
-/* ================== Misc ================== */
-html { 
-  scroll-behavior: smooth !important; 
-}
-
-*:focus { 
-  outline: 2px solid #16a34a !important; 
-  outline-offset: 2px !important; 
-}
-
-body, .wrapper { 
-  overflow-x: hidden !important; 
-}
-
-/* Ensure page content wrapper doesn't interfere */
-.page__content {
-  max-width: 100% !important;
-  margin: 0 !important;
-  padding: 0 !important;
-}
-
-/* Override any author bio that might appear */
-.author__bio {
-  display: none !important;
-}
+/* Accessibility & misc */
+html { scroll-behavior: smooth !important; }
+*:focus { outline: 2px solid #16a34a !important; outline-offset: 2px !important; }
+.initial-content, .wrapper, body { overflow-x: hidden !important; }
