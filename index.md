@@ -3,7 +3,6 @@ layout: single
 title: ""
 author_profile: true
 classes: wide
----
 <div class="three-column-container">
         <div class="main-content-column">
     <h2>About</h2>
