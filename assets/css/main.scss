@@ -1,0 +1,9 @@
+---
+---
+@import "minimal-mistakes/skins/contrast"; // black & white skin
+@import "minimal-mistakes";
+
+// Small, tasteful tweaks
+a { text-decoration: underline; text-underline-offset: 2px; }
+a:hover { text-decoration: none; }
+.page__content img { border-radius: 4px; }
