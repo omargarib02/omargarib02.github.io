@@ -17,361 +17,432 @@ a:hover { text-decoration: none; }
 .page__content img { border-radius: 6px; }
 
 /* ----------------------- Sidebar / author card -----------------------
-   OPTIMIZED: Large avatar that fits perfectly within column bounds */
+   OPTIMIZED: Large avatar that fits perfectly within column bounds */
 .sidebar {
-  flex: 0 0 380px !important;   /* fixed width sidebar */
-  max-width: 380px !important;
-  padding: 0 !important;         /* remove default padding */
-  overflow-x: hidden !important; /* prevent any horizontal scroll */
+  flex: 0 0 380px !important;   /* fixed width sidebar */
+  max-width: 380px !important;
+  padding: 0 !important;         /* remove default padding */
+  overflow-x: hidden !important; /* prevent any horizontal scroll */
 }
 
 /* Inner wrapper for proper padding without affecting width */
 .sidebar__inner {
-  padding: 0 20px !important;    /* consistent internal padding */
-  width: 100% !important;
-  box-sizing: border-box !important;
+  padding: 0 20px !important;    /* consistent internal padding */
+  width: 100% !important;
+  box-sizing: border-box !important;
 }
 
 /* Author section container */
 .sidebar .author {
-  width: 100% !important;
-  padding: 0 !important;
-  margin: 0 !important;
-  text-align: center !important;
+  width: 100% !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  text-align: center !important;
 }
 
 /* >>> LARGE RECTANGULAR AVATAR - PROPERLY CONTAINED <<< */
 .sidebar .author__avatar {
-  display: block !important;
-  width: calc(100% - 40px) !important;  /* full width minus padding */
-  max-width: 340px !important;          /* max size to fit in 380px column */
-  height: auto !important;
-  margin: 20px auto 25px auto !important;
-  padding: 0 !important;
-  border-radius: 0 !important;
-  overflow: hidden !important;
-  float: none !important;
-  position: relative !important;
-  
-  /* Center the container */
-  left: 50% !important;
-  transform: translateX(-50%) !important;
+  display: block !important;
+  width: calc(100% - 40px) !important;  /* full width minus padding */
+  max-width: 340px !important;          /* max size to fit in 380px column */
+  height: auto !important;
+  margin: 20px auto 25px auto !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+  overflow: hidden !important;
+  float: none !important;
+  position: relative !important;
+  
+  /* Center the container */
+  left: 50% !important;
+  transform: translateX(-50%) !important;
 }
 
 /* The actual image - fills container width */
 .sidebar .author__avatar img {
-  width: 100% !important;              /* fill the container */
-  max-width: 100% !important;
-  height: auto !important;
-  object-fit: cover !important;
-  object-position: center !important;
-  border-radius: 12px !important;      /* subtle rounding */
-  border: 0 !important;
-  padding: 0 !important;
-  margin: 0 !important;
-  display: block !important;
+  width: 100% !important;              /* fill the container */
+  max-width: 100% !important;
+  height: auto !important;
+  object-fit: cover !important;
+  object-position: center !important;
+  border-radius: 12px !important;      /* subtle rounding */
+  border: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  display: block !important;
 }
 
 /* Remove decorative elements */
 .sidebar .author__avatar:before,
 .sidebar .author__avatar:after {
-  display: none !important;
-  content: none !important;
+  display: none !important;
+  content: none !important;
 }
 
 /* Author name styling - prominent and centered */
 .sidebar .author__name {
-  font-size: 1.5rem !important;
-  font-weight: 700 !important;
-  margin: 0 0 0.75rem 0 !important;
-  text-align: center !important;
-  line-height: 1.2 !important;
-  width: 100% !important;
+  font-size: 1.5rem !important;
+  font-weight: 700 !important;
+  margin: 0 0 0.75rem 0 !important;
+  text-align: center !important;
+  line-height: 1.2 !important;
+  width: 100% !important;
 }
 
 /* Author bio/description - clean and readable */
 .sidebar .author__bio {
-  font-size: 0.92rem !important;
-  line-height: 1.4 !important;
-  margin: 0 0 1.25rem 0 !important;
-  padding: 0 10px !important;
-  text-align: center !important;
-  color: #666 !important;
+  font-size: 0.92rem !important;
+  line-height: 1.4 !important;
+  margin: 0 0 1.25rem 0 !important;
+  padding: 0 10px !important;
+  text-align: center !important;
+  color: #666 !important;
 }
 
 /* Social links container */
 .sidebar .author__urls-wrapper {
-  width: 100% !important;
-  margin: 1.5rem 0 !important;
-  padding: 0 !important;
-  text-align: center !important;
-  border-top: 1px solid #e0e0e0 !important;
-  padding-top: 1.5rem !important;
+  width: 100% !important;
+  margin: 1.5rem 0 !important;
+  padding: 0 !important;
+  text-align: center !important;
+  border-top: 1px solid #e0e0e0 !important;
+  padding-top: 1.5rem !important;
 }
 
 /* Social links list - clean vertical layout */
 .sidebar .author__urls {
-  list-style: none !important;
-  padding: 0 !important;
-  margin: 0 !important;
-  width: 100% !important;
-  
-  /* Make links stack nicely */
-  li {
-    margin: 0.4rem 0 !important;
-    padding: 0 !important;
-    text-align: left !important;
-    width: 100% !important;
-    
-    a {
-      display: inline-flex !important;
-      align-items: center !important;
-      padding: 0.25rem 0 !important;
-      text-decoration: none !important;
-      color: #333 !important;
-      transition: color 0.2s ease !important;
-      
-      &:hover {
-        color: #16a34a !important;
-      }
-      
-      /* Icon spacing */
-      svg, .fas, .fab, .far {
-        margin-right: 0.5rem !important;
-        width: 16px !important;
-        height: 16px !important;
-      }
-    }
-  }
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  width: 100% !important;
+  
+  /* Make links stack nicely */
+  li {
+    margin: 0.4rem 0 !important;
+    padding: 0 !important;
+    text-align: left !important;
+    width: 100% !important;
+    
+    a {
+      display: inline-flex !important;
+      align-items: center !important;
+      padding: 0.25rem 0 !important;
+      text-decoration: none !important;
+      color: #333 !important;
+      transition: color 0.2s ease !important;
+      
+      &:hover {
+        color: #16a34a !important;
+      }
+      
+      /* Icon spacing */
+      svg, .fas, .fab, .far {
+        margin-right: 0.5rem !important;
+        width: 16px !important;
+        height: 16px !important;
+      }
+    }
+  }
 }
 
 /* Center the social links while keeping left-aligned text */
 .sidebar .author__urls.social-icons {
-  display: inline-block !important;
-  text-align: left !important;
+  display: inline-block !important;
+  text-align: left !important;
 }
 
 /* News section styling */
-.sidebar h3 { 
-  font-size: 1.1rem !important;
-  font-weight: 600 !important;
-  text-align: left !important;
-  margin: 2rem 0 1rem 0 !important;
-  padding: 0 20px !important;
-  color: #222 !important;
+.sidebar h3 { 
+  font-size: 1.1rem !important;
+  font-weight: 600 !important;
+  text-align: left !important;
+  margin: 2rem 0 1rem 0 !important;
+  padding: 0 20px !important;
+  color: #222 !important;
 }
 
 /* News list - better spacing and readability */
 .sidebar ul.news {
-  list-style: none !important;
-  margin: 0 !important;
-  padding: 0 20px !important;
+  list-style: none !important;
+  margin: 0 !important;
+  padding: 0 20px !important;
 }
 
 .sidebar ul.news li {
-  margin: 0.75rem 0 !important;
-  padding-left: 1.25rem !important;
-  position: relative !important;
-  line-height: 1.45 !important;
-  font-size: 0.9rem !important;
-  
-  /* Custom bullet */
-  &:before {
-    content: "▸" !important;
-    position: absolute !important;
-    left: 0 !important;
-    color: #16a34a !important;
-    font-weight: bold !important;
-  }
-  
-  strong {
-    color: #16a34a !important;
-    font-weight: 600 !important;
-  }
+  margin: 0.75rem 0 !important;
+  padding-left: 1.25rem !important;
+  position: relative !important;
+  line-height: 1.45 !important;
+  font-size: 0.9rem !important;
+  
+  /* Custom bullet */
+  &:before {
+    content: "▸" !important;
+    position: absolute !important;
+    left: 0 !important;
+    color: #16a34a !important;
+    font-weight: bold !important;
+  }
+  
+  strong {
+    color: #16a34a !important;
+    font-weight: 600 !important;
+  }
 }
 
 /* Responsive adjustments */
 @media (max-width: 1200px) {
-  .sidebar {
-    flex-basis: 340px !important;
-    max-width: 340px !important;
-  }
-  
-  .sidebar .author__avatar {
-    max-width: 300px !important;
-  }
+  .sidebar {
+    flex-basis: 340px !important;
+    max-width: 340px !important;
+  }
+  
+  .sidebar .author__avatar {
+    max-width: 300px !important;
+  }
 }
 
 @media (max-width: 1024px) {
-  .sidebar {
-    flex-basis: 320px !important;
-    max-width: 320px !important;
-  }
-  
-  .sidebar .author__avatar {
-    max-width: 280px !important;
-  }
-  
-  .sidebar .author__name {
-    font-size: 1.3rem !important;
-  }
+  .sidebar {
+    flex-basis: 320px !important;
+    max-width: 320px !important;
+  }
+  
+  .sidebar .author__avatar {
+    max-width: 280px !important;
+  }
+  
+  .sidebar .author__name {
+    font-size: 1.3rem !important;
+  }
 }
 
 @media (max-width: 768px) {
-  .sidebar {
-    flex-basis: 100% !important;
-    max-width: 100% !important;
-    margin-bottom: 2rem !important;
-  }
-  
-  .sidebar .author__avatar {
-    max-width: 320px !important;
-    margin: 20px auto !important;
-    left: 0 !important;
-    transform: none !important;
-  }
-  
-  .sidebar .author__urls {
-    max-width: 320px !important;
-    margin: 0 auto !important;
-  }
+  .sidebar {
+    flex-basis: 100% !important;
+    max-width: 100% !important;
+    margin-bottom: 2rem !important;
+  }
+  
+  .sidebar .author__avatar {
+    max-width: 320px !important;
+    margin: 20px auto !important;
+    left: 0 !important;
+    transform: none !important;
+  }
+  
+  .sidebar .author__urls {
+    max-width: 320px !important;
+    margin: 0 auto !important;
+  }
 }
 
 @media (max-width: 480px) {
-  .sidebar .author__avatar {
-    max-width: 260px !important;
-  }
+  .sidebar .author__avatar {
+    max-width: 260px !important;
+  }
 }
 
 /* ----------------------- Main content area adjustments ----------------------- */
 .page {
-  padding-left: 1.5rem !important;
-  width: 100% !important;
+  padding-left: 1.5rem !important;
+  width: 100% !important;
 }
 
 @media (max-width: 768px) {
-  .page {
-    padding: 1rem !important;
-  }
+  .page {
+    padding: 1rem !important;
+  }
 }
 
 /* Ensure proper layout container */
 .layout--single {
-  display: flex !important;
-  max-width: 1280px !important;
-  margin: 0 auto !important;
-  padding: 2rem !important;
+  display: flex !important;
+  max-width: 1280px !important;
+  margin: 0 auto !important;
+  padding: 2rem !important;
 }
 
 @media (max-width: 768px) {
-  .layout--single {
-    flex-direction: column !important;
-    padding: 1rem !important;
-  }
+  .layout--single {
+    flex-direction: column !important;
+    padding: 1rem !important;
+  }
 }
 
 /* ----------------------- Feature cards (buttons stay green) ----------------------- */
 .btn--primary {
-  background-color: #16a34a !important;
-  border-color: #16a34a !important;
-  color: #fff !important;
-  font-weight: 500 !important;
-  padding: 0.5rem 1.25rem !important;
-  border-radius: 4px !important;
-  transition: all 0.2s ease !important;
+  background-color: #16a34a !important;
+  border-color: #16a34a !important;
+  color: #fff !important;
+  font-weight: 500 !important;
+  padding: 0.5rem 1.25rem !important;
+  border-radius: 4px !important;
+  transition: all 0.2s ease !important;
 }
 
 .btn--primary:hover,
 .btn--primary:focus {
-  background-color: #0f8a3b !important;
-  border-color: #0f8a3b !important;
-  color: #fff !important;
-  transform: translateY(-1px) !important;
-  box-shadow: 0 4px 8px rgba(22, 163, 74, 0.2) !important;
+  background-color: #0f8a3b !important;
+  border-color: #0f8a3b !important;
+  color: #fff !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 4px 8px rgba(22, 163, 74, 0.2) !important;
 }
 
 /* Ensure any card button is green */
 .feature__item .btn {
-  background-color: #16a34a !important;
-  border-color: #16a34a !important;
-  color: #fff !important;
+  background-color: #16a34a !important;
+  border-color: #16a34a !important;
+  color: #fff !important;
 }
 
 .feature__item .btn:hover,
 .feature__item .btn:focus {
-  background-color: #0f8a3b !important;
-  border-color: #0f8a3b !important;
+  background-color: #0f8a3b !important;
+  border-color: #0f8a3b !important;
 }
 
 /* Card improvements */
 .feature__wrapper {
-  gap: 1.5rem !important;
-  margin-top: 2rem !important;
+  gap: 1.5rem !important;
+  margin-top: 2rem !important;
 }
 
 .feature__item {
-  border-radius: 8px !important;
-  overflow: hidden !important;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08) !important;
-  transition: transform 0.2s ease, box-shadow 0.2s ease !important;
-  
-  &:hover {
-    transform: translateY(-2px) !important;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.12) !important;
-  }
+  border-radius: 8px !important;
+  overflow: hidden !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08) !important;
+  transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+  
+  &:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.12) !important;
+  }
 }
 
 .feature__item .archive__item-title {
-  white-space: normal !important;
-  overflow: visible !important;
-  text-overflow: initial !important;
-  font-weight: 600 !important;
+  white-space: normal !important;
+  overflow: visible !important;
+  text-overflow: initial !important;
+  font-weight: 600 !important;
 }
 
 /* ----------------------- Coursework table readability ----------------------- */
 .page__content table {
-  font-size: 0.95rem !important;
-  border-collapse: collapse !important;
-  width: 100% !important;
-  margin: 1.5rem 0 !important;
+  font-size: 0.95rem !important;
+  border-collapse: collapse !important;
+  width: 100% !important;
+  margin: 1.5rem 0 !important;
 }
 
 .page__content table th,
 .page__content table td {
-  padding: 0.5rem 0.75rem !important;
-  vertical-align: top !important;
-  border-bottom: 1px solid #e0e0e0 !important;
+  padding: 0.5rem 0.75rem !important;
+  vertical-align: top !important;
+  border-bottom: 1px solid #e0e0e0 !important;
 }
 
 .page__content table th {
-  font-weight: 600 !important;
-  text-align: left !important;
-  background: #f8f8f8 !important;
+  font-weight: 600 !important;
+  text-align: left !important;
+  background: #f8f8f8 !important;
 }
 
 /* ----------------------- Additional polish ----------------------- */
 /* Smooth scrolling for the entire page */
 html {
-  scroll-behavior: smooth !important;
+  scroll-behavior: smooth !important;
 }
 
 /* Better focus states for accessibility */
 *:focus {
-  outline: 2px solid #16a34a !important;
-  outline-offset: 2px !important;
+  outline: 2px solid #16a34a !important;
+  outline-offset: 2px !important;
 }
 
 /* Remove focus outline for mouse users */
 *:focus:not(:focus-visible) {
-  outline: none !important;
+  outline: none !important;
 }
 
 /* Ensure sidebar never causes horizontal scroll */
 body {
-  overflow-x: hidden !important;
+  overflow-x: hidden !important;
 }
 
 .initial-content,
 .wrapper {
-  overflow-x: hidden !important;
+  overflow-x: hidden !important;
+}
+
+
+/*
+=================================================================
+  NEW & FIXED: THREE-COLUMN LAYOUT FOR HOMEPAGE
+=================================================================
+*/
+
+/* 1. Main container for the columns in the content area */
+.three-column-container {
+  display: flex;
+  flex-wrap: wrap; /* Allows columns to stack on smaller screens */
+  gap: 2rem;       /* Space between columns */
+  width: 100%;
+}
+
+/* 2. The left column (About/Highlights) */
+.main-content-column {
+  flex: 2; /* Takes up 2/3 of the available space */
+  min-width: 300px; /* Prevents it from getting too squished */
+}
+
+/* 3. The right column (Featured Research/Coursework) */
+.research-coursework-column {
+  flex: 1; /* Takes up 1/3 of the available space */
+  min-width: 300px;
+}
+
+/* 4. Research card styling from your index.md */
+.research-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.research-card {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+.research-card:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.research-card img {
+  width: 100%;
+  border-radius: 6px;
+  margin-bottom: 0.75rem;
+}
+
+.research-card h4 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.research-card p {
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+/* 5. Responsive Behavior: Stack columns on smaller screens */
+@media (max-width: 1024px) {
+  .three-column-container {
+    flex-direction: column; /* Stack the columns vertically */
+  }
 }
