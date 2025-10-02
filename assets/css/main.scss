@@ -60,8 +60,8 @@ a:hover { text-decoration: none; }
 }
 
 /* Center column wider; right column comfortable for cards */
-.content-columns__main  { flex: 0 1 68%; min-width: 560px; }
-.content-columns__aside { flex: 0 0 32%; min-width: 360px; }
+.content-columns__main  { flex: 0 1 60%; min-width: 520px; }
+.content-columns__aside { flex: 0 0 40%; min-width: 420px; }
 
 /* Stack on narrower screens */
 @media (max-width: 1100px){
