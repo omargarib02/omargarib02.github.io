@@ -6,9 +6,7 @@ classes: wide
 ---
 
 <div class="three-column-container">
-  <!-- Column 1 (Left) is the theme's sidebar: author_profile + links + News -->
-
-  <!-- Column 2 (Center): About + Highlights -->
+  <!-- Column 2 (center) : About + Highlights -->
   <div class="main-content-column">
     <h2>About</h2>
     <p><strong>I'm an MS student in Computational Science & Engineering at Georgia Tech</strong> (Aerospace Systems Design Lab, ASDL).</p>
@@ -25,7 +23,7 @@ classes: wide
     </ul>
   </div>
 
-  <!-- Column 3 (Right): Featured Research + Coursework -->
+  <!-- Column 3 (right) : Featured Research + Coursework -->
   <div class="research-coursework-column">
     <h2>Featured Research</h2>
     <div class="research-cards">
