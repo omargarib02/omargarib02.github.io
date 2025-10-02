@@ -19,8 +19,8 @@ a:hover { text-decoration: none; }
 /* ----------------------- Sidebar / author card -----------------------
    MAJOR UPDATES: Force much larger rectangular portrait with aggressive overrides */
 .sidebar {
-  flex: 0 0 480px !important;   /* wider to accommodate larger image */
-  max-width: 480px !important;
+  flex: 0 0 400px !important;   /* wider to accommodate larger image */
+  max-width: 390x !important;
   padding-right: 2rem !important;
 }
 
