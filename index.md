@@ -3,8 +3,6 @@ layout: default
 title: Home
 ---
 
-# Omar Garib
-
 **MS, Computational Science & Engineering — Georgia Tech**  
 Aerospace Systems Design Lab (ASDL)
 
