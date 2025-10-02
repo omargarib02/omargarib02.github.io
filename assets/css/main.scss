@@ -3,17 +3,42 @@
 @import "minimal-mistakes/skins/contrast"; // black & white skin
 @import "minimal-mistakes";
 
-/* ----------------------- Links & images ----------------------- */
-a {
-  text-decoration: underline;
-  text-underline-offset: 2px;
-}
+/* ----------------------- Typography ----------------------- */
+/* Slightly smaller overall typography for a tighter, more professional feel */
+html { font-size: 15px; }                /* was ~16px */
+.site-nav .page-link { font-size: 0.92rem; }
+.page__title { font-size: 1.6rem; }
+h2 { font-size: 1.22rem; }
+h3 { font-size: 1.08rem; }
+.page__content p { line-height: 1.55; }
+
+/* Links: understated but clear */
+a { text-decoration: underline; text-underline-offset: 2px; }
 a:hover { text-decoration: none; }
+.page__content img { border-radius: 6px; }
 
-/* Research images, etc. */
-.page__content img { border-radius: 4px; }
+/* ----------------------- Sidebar / author card ----------------------- */
+/* Allow a wider author card so a larger rectangular image fits */
+.sidebar { max-width: 300px; }
 
-/* ----------------------- Buttons: make primary = green ----------------------- */
+.author__avatar {
+  width: 220px;          /* bigger than default */
+  height: auto;
+  margin: 0 auto 0.75rem auto;
+  border-radius: 8px !important;   /* rectangular with soft corners */
+  overflow: hidden;
+}
+.author__avatar img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 8px !important;   /* ensure image matches container */
+}
+.author__avatar:before { display: none !important; }  /* remove circular mask */
+.author__name { font-size: 1.05rem; }
+
+/* ----------------------- Feature cards ----------------------- */
+/* Use green as the primary call-to-action color across feature cards */
 .btn--primary {
   background-color: #16a34a !important;   /* green-600 */
   border-color:     #16a34a !important;
@@ -26,60 +51,25 @@ a:hover { text-decoration: none; }
   color: #fff !important;
 }
 
-/* Some components generate their own button classes; normalize them too */
- a.btn, .btn {
-  border-radius: 6px;
-}
- .archive__item-excerpt + p .btn--primary { /* button inside feature_row */
+/* Some instances inside feature_row can drop the modifier class.
+   Force ANY button inside a feature card to be green. */
+.feature__item .btn {
   background-color: #16a34a !important;
   border-color:     #16a34a !important;
+  color: #fff !important;
+}
+.feature__item .btn:hover,
+.feature__item .btn:focus {
+  background-color: #0f8a3b !important;
+  border-color:     #0f8a3b !important;
 }
 
-/* ----------------------- Reduce overall sizing ----------------------- */
-/* Base size */
-html { font-size: 15.5px; }   /* try 15–16; adjust to taste */
-
-/* Top nav a bit smaller */
-.site-nav .page-link { font-size: 0.95rem; }
-
-/* Page title and headings */
-.page__title { font-size: 1.7rem; }     /* big H1 on pages */
-h2 { font-size: 1.25rem; }
-h3 { font-size: 1.10rem; }
-
-/* Tighten vertical rhythm a touch */
-.page__content p { line-height: 1.55; }
-
-/* ----------------------- Author profile: square + larger ----------------------- */
-.sidebar {
-  /* allow a touch more width for the author box so a larger image fits */
-  max-width: 260px;
-}
-.author__avatar {
-  /* remove circular crop from the skin */
-  border-radius: 6px !important;   /* square with mild rounding */
-  overflow: hidden;
-  width: 180px;                     /* larger avatar */
-  height: auto;                     /* preserve aspect ratio */
-  margin: 0 auto 0.5rem auto;
-}
-.author__avatar img {
-  display: block;
-  width: 100%;
-  height: auto;
-  border-radius: 6px !important;    /* ensure image matches container */
-}
-
-/* If the skin enforces circle with ::before, neutralize it */
-.author__avatar:before { display: none !important; }
-
-/* Author name spacing smaller */
-.author__name { font-size: 1.05rem; }
-
-/* ----------------------- Feature row usability ----------------------- */
-/* Allow titles to wrap instead of truncating */
+/* Let long titles wrap naturally instead of truncating */
 .feature__item .archive__item-title {
   white-space: normal;
   overflow: visible;
   text-overflow: initial;
 }
+
+/* Optional: give the grid a touch more breathing room */
+.feature__wrapper { gap: 1.25rem; }
