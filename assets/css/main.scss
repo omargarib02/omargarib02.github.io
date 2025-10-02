@@ -17,44 +17,59 @@ a:hover { text-decoration: none; }
 .page__content img { border-radius: 6px; }
 
 /* ----------------------- Sidebar / author card ----------------------- */
-/* Wider left rail so a larger rectangular portrait fits comfortably */
-.sidebar { 
-  max-width: 360px;            /* was 300px */
+/* Widen the left rail and allow a much larger rectangular portrait */
+.page__sidebar { 
+  flex: 0 0 400px !important;   /* width of the left column */
+  max-width: 400px !important;
 }
-@media (min-width: 80em) {
-  .sidebar { max-width: 380px; }  /* roomier on very wide screens */
+@media (max-width: 1200px) {
+  .page__sidebar { flex-basis: 360px !important; max-width: 360px !important; }
+}
+@media (max-width: 1024px) {
+  .page__sidebar { flex-basis: 320px !important; max-width: 320px !important; }
+}
+@media (max-width: 768px) {
+  .page__sidebar, .page__content { flex-basis: 100% !important; max-width: 100% !important; }
 }
 
 /* Bigger rectangular avatar, centered */
-.author__avatar {
-  width: 300px;                 /* ~35%+ larger than before */
+.page__sidebar .author__avatar {
+  width: 340px !important;             /* >35% larger than before */
   height: auto;
-  margin: 0 auto 0.9rem auto;
-  border-radius: 10px !important;  /* rectangular with soft corners */
+  margin: 0 auto 1rem auto;
+  border-radius: 12px !important;      /* rectangular with soft corners */
   overflow: hidden;
 }
-.author__avatar img {
+.page__sidebar .author__avatar img {
   display: block;
-  width: 100%;
-  height: auto;
-  border-radius: 10px !important;
+  width: 100% !important;
+  height: auto !important;
+  border-radius: 12px !important;
 }
-/* remove circular mask some skins add */
-.author__avatar:before { display: none !important; }
+/* Remove circular mask some skins add */
+.page__sidebar .author__avatar:before { display: none !important; }
 
-/* Center the name and link list under the photo */
-.sidebar .author__content,
-.sidebar .author__urls-wrapper { text-align: center; }
+/* Center the name and links under the photo */
+.page__sidebar .author__content,
+.page__sidebar .author__urls-wrapper { text-align: center !important; }
 
-/* Keep link list readable while centering the block */
-.author__urls { 
+/* Keep the link list readable while centering the block */
+.page__sidebar .author__urls { 
   display: inline-block; 
   text-align: left; 
-  margin: 0 auto; 
+  margin: 0.35rem auto 0 auto; 
 }
-.author__name { font-size: 1.06rem; }
-/* Center section headings that appear in the rail (e.g., News) */
-.sidebar h3 { text-align: center; }
+
+/* Sidebar section headings (e.g., News) centered for balance */
+.page__sidebar h3 { text-align: center; }
+
+/* News list styling in the sidebar */
+.page__sidebar ul.news { 
+  list-style: disc; 
+  margin: 0.25rem 0 0 1.25rem; 
+  padding: 0;
+}
+.page__sidebar ul.news li { margin: 0.35rem 0; }
 
 /* ----------------------- Feature cards (buttons stay green) ----------------------- */
 .btn--primary {
