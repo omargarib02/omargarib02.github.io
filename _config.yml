@@ -3,29 +3,28 @@ description: Multimodal intelligent systems · human-in-the-loop autonomy · spe
 url: https://omargarib02.github.io
 lang: en
 
-# ---------- Theme ----------
 remote_theme: "mmistakes/minimal-mistakes@4.26.2"
 minimal_mistakes_skin: "contrast"
 
-# ---------- Plugins ----------
 plugins:
   - jekyll-include-cache
   - jekyll-seo-tag
   - jekyll-sitemap
 
-# ---------- Build / Markdown ----------
 markdown: kramdown
 highlighter: rouge
 kramdown:
   input: GFM
   hard_wrap: false
 
-# ---------- Author / Social ----------
 author:
   name: Omar Garib
-  avatar: /assets/img/headshot.jpg
+  avatar: /assets/img/headshot.jpg          # keep this; CSS makes it rectangular & larger
   email: ogarib@gatech.edu
   links:
+    - label: CV
+      icon: far fa-file-alt
+      url: /assets/cv/Omar_Garib_CV.pdf
     - label: GitHub
       icon: fab fa-github
       url: https://github.com/omargarib02
@@ -33,7 +32,6 @@ author:
       icon: fab fa-linkedin
       url: https://www.linkedin.com/in/omargarib/
 
-# ---------- Defaults ----------
 defaults:
   - scope:
       path: ""
@@ -43,11 +41,4 @@ defaults:
       author_profile: false
       comments: false
 
-# ---------- Navigation (uses _data/navigation.yml) ----------
-# nothing here; the nav file controls the menu
-
-# ---------- Collections (none needed now) ----------
-# (leave empty)
-
-# ---------- Extras ----------
 timezone: America/New_York
