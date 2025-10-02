@@ -4,55 +4,71 @@
 @import "minimal-mistakes";
 
 /* ----------------------- Typography ----------------------- */
-html { font-size: 15px; }                /* slightly smaller than default */
+html { font-size: 15px; }                 /* slightly tighter overall */
 .site-nav .page-link { font-size: 0.92rem; }
 .page__title { font-size: 1.6rem; }
 h2 { font-size: 1.22rem; }
 h3 { font-size: 1.08rem; }
 .page__content p { line-height: 1.55; }
 
-/* Links: understated but clear */
+/* Links */
 a { text-decoration: underline; text-underline-offset: 2px; }
 a:hover { text-decoration: none; }
 .page__content img { border-radius: 6px; }
 
 /* ----------------------- Sidebar / author card ----------------------- */
-/* Give the sidebar a touch more width so a larger rectangular avatar fits */
-.sidebar { max-width: 340px; }  /* was 300px */
+/* Wider left rail so a larger rectangular portrait fits comfortably */
+.sidebar { 
+  max-width: 360px;            /* was 300px */
+}
+@media (min-width: 80em) {
+  .sidebar { max-width: 380px; }  /* roomier on very wide screens */
+}
 
-/* ~35% larger avatar, rectangular with soft corners */
+/* Bigger rectangular avatar, centered */
 .author__avatar {
-  width: 300px;                /* was 220px */
+  width: 300px;                 /* ~35%+ larger than before */
   height: auto;
-  margin: 0 auto 0.75rem auto;
-  border-radius: 8px !important;
+  margin: 0 auto 0.9rem auto;
+  border-radius: 10px !important;  /* rectangular with soft corners */
   overflow: hidden;
 }
 .author__avatar img {
   display: block;
   width: 100%;
   height: auto;
-  border-radius: 8px !important;
+  border-radius: 10px !important;
 }
-.author__avatar:before { display: none !important; }  /* remove circular mask */
-.author__name { font-size: 1.05rem; }
+/* remove circular mask some skins add */
+.author__avatar:before { display: none !important; }
 
-/* ----------------------- Feature cards ----------------------- */
-/* Use green as the primary call-to-action color across feature cards */
+/* Center the name and link list under the photo */
+.sidebar .author__content,
+.sidebar .author__urls-wrapper { text-align: center; }
+
+/* Keep link list readable while centering the block */
+.author__urls { 
+  display: inline-block; 
+  text-align: left; 
+  margin: 0 auto; 
+}
+.author__name { font-size: 1.06rem; }
+/* Center section headings that appear in the rail (e.g., News) */
+.sidebar h3 { text-align: center; }
+
+/* ----------------------- Feature cards (buttons stay green) ----------------------- */
 .btn--primary {
-  background-color: #16a34a !important;   /* green-600 */
+  background-color: #16a34a !important; /* green-600 */
   border-color:     #16a34a !important;
   color: #fff !important;
 }
 .btn--primary:hover,
 .btn--primary:focus {
-  background-color: #0f8a3b !important;   /* darker green */
+  background-color: #0f8a3b !important; /* darker green */
   border-color:     #0f8a3b !important;
   color: #fff !important;
 }
-
-/* Some instances inside feature_row can drop the modifier class.
-   Force ANY button inside a feature card to be green. */
+/* Force any button inside feature cards to be green */
 .feature__item .btn {
   background-color: #16a34a !important;
   border-color:     #16a34a !important;
@@ -64,12 +80,11 @@ a:hover { text-decoration: none; }
   border-color:     #0f8a3b !important;
 }
 
-/* Let long titles wrap naturally instead of truncating */
+/* Let long card titles wrap cleanly */
 .feature__item .archive__item-title {
   white-space: normal;
   overflow: visible;
   text-overflow: initial;
 }
-
-/* Optional: give the grid a touch more breathing room */
+/* Comfortable spacing between cards */
 .feature__wrapper { gap: 1.25rem; }
