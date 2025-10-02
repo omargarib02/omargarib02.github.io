@@ -1,15 +1,53 @@
 title: Omar Garib
 description: Multimodal intelligent systems · human-in-the-loop autonomy · speech/vision/3D reasoning · social & assistive robotics
-theme: jekyll-theme-minimal
-logo: /assets/img/headshot.jpg
-show_downloads: false
-timezone: America/New_York
+url: https://omargarib02.github.io
+lang: en
+
+# ---------- Theme ----------
+remote_theme: "mmistakes/minimal-mistakes@4.26.2"
+minimal_mistakes_skin: "contrast"
+
+# ---------- Plugins ----------
 plugins:
+  - jekyll-include-cache
   - jekyll-seo-tag
   - jekyll-sitemap
-header_pages:
-  - research.md
-  - publications.md
-  - projects.md
-  - cv.md
-  - contact.md
+
+# ---------- Build / Markdown ----------
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  hard_wrap: false
+
+# ---------- Author / Social ----------
+author:
+  name: Omar Garib
+  avatar: /assets/img/headshot.jpg
+  email: ogarib@gatech.edu
+  links:
+    - label: GitHub
+      icon: fab fa-github
+      url: https://github.com/omargarib02
+    - label: LinkedIn
+      icon: fab fa-linkedin
+      url: https://www.linkedin.com/in/omargarib/
+
+# ---------- Defaults ----------
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: single
+      toc: false
+      author_profile: false
+      comments: false
+
+# ---------- Navigation (uses _data/navigation.yml) ----------
+# nothing here; the nav file controls the menu
+
+# ---------- Collections (none needed now) ----------
+# (leave empty)
+
+# ---------- Extras ----------
+timezone: America/New_York
