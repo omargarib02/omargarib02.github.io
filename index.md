@@ -5,9 +5,15 @@ author_profile: true
 classes: wide
 ---
 
-<div class="three-column-container">
+<!--
+Three columns total:
+- Left column is the theme sidebar (author_profile + News) – handled via _config.yml defaults
+- Center and Right columns are created below with a safe Flexbox container
+-->
+
+<div class="content-columns" style="display:flex;gap:2rem;align-items:flex-start;flex-wrap:nowrap;">
   <!-- Column 2 (center) : About + Highlights -->
-  <div class="main-content-column">
+  <div class="content-columns__main" style="flex:0 1 64%;min-width:520px;">
     <h2>About</h2>
     <p><strong>I'm an MS student in Computational Science & Engineering at Georgia Tech</strong> (Aerospace Systems Design Lab, ASDL).</p>
 
@@ -24,8 +30,9 @@ classes: wide
   </div>
 
   <!-- Column 3 (right) : Featured Research + Coursework -->
-  <div class="research-coursework-column">
+  <aside class="content-columns__aside" style="flex:0 0 34%;min-width:300px;">
     <h2>Featured Research</h2>
+
     <div class="research-cards">
       <div class="research-card">
         <img src="/assets/img/research/airhilt_scenarios.png" alt="AIRHILT scenario montage">
@@ -88,5 +95,5 @@ classes: wide
         </tr>
       </tbody>
     </table>
-  </div>
+  </aside>
 </div>
