@@ -3,16 +3,7 @@ layout: single
 title: ""
 author_profile: true
 
-# Sidebar blocks beneath the author profile (News goes here)
-sidebar:
-  - title: "News"
-    text: |
-      - **September 2025** — Began research effort on designing an effective, personalized AI companion for the elderly.
-      - **September 2025** — Submitted **AIRHILT** to ICRA.
-      - **August 2025** — Two **AIAA SciTech** abstracts accepted.
-      - **May 2025** — Began research collaboration with **NASA Langley** (Digital Transformation).
-
-# Featured research cards (order: AIRHILT → SimuGAN → Metadata)
+# Featured research cards (order already set to AIRHILT → SimuGAN → Metadata)
 research_cards:
   - image_path: /assets/img/research/airhilt_scenarios.png
     alt: "AIRHILT scenario montage"
@@ -37,8 +28,7 @@ research_cards:
     btn_class: "btn--primary"
 ---
 
-**MS, Computational Science & Engineering — Georgia Tech**  
-Aerospace Systems Design Lab (ASDL)
+**I’m an MS student in Computational Science & Engineering at Georgia Tech** (Aerospace Systems Design Lab, ASDL).
 
 I build **multimodal, human‑in‑the‑loop intelligent systems** for safety‑critical autonomy, combining **speech**, **vision**, and **3D spatial reasoning**, and I also develop **automated document/knowledge‑extraction pipelines**.
 
@@ -49,8 +39,14 @@ My research interests include **human–robot teaming** and **social/assistive r
 - **SimuGAN‑Whisper‑ATC** — learned very‑high‑frequency radio noise + ASR fine‑tuning; **large word‑error‑rate reduction** on real **air traffic control**.
 - **LLM/RAG document extraction** — multimodal mining of engineering PDFs for **metadata & discovery**.
 
+### News
+- **September 2025** — Began research effort on designing an effective, personalized AI companion for the elderly.
+- **September 2025** — Submitted **AIRHILT** to ICRA.
+- **August 2025** — Two **AIAA SciTech** abstracts accepted.
+- **May 2025** — Began research collaboration with **NASA Langley** (Digital Transformation).
+
 ### Featured research
-{% include feature_row id="research_cards" %}  <!-- grid; 3-up on desktop -->
+{% include feature_row id="research_cards" %}
 
 ### Selected coursework
 CS 6476 **Computer Vision** (Humphrey Shi) · CS 7650 **Natural Language Processing** (Alan Ritter) ·  
