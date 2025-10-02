@@ -42,9 +42,10 @@ My research interests include **human–robot teaming** and **social/assistive r
 - **LLM/RAG document extraction** — multimodal mining of engineering PDFs for **metadata & discovery**.
 
 ### News
+- **September 2025** - Began research effort on designing an effective, personalized AI companion for the elderly.
+- **September 2025** — Submitted **AIRHILT** to ICRA.
+- **August 2025** — Two **AIAA SciTech** abstracts accepted.
 - **May 2025** — Began research collaboration with **NASA Langley** (Digital Transformation).
-- **Dec 2024** — Submitted **AIRHILT** to ICRA.
-- **Nov 2024** — Two **AIAA SciTech** abstracts accepted.
 
 ### Selected coursework
 CS 6476 **Computer Vision** (Humphrey Shi) · CS 7650 **NLP** (Alan Ritter) · CS 8803 **Deep RL** (Sehoon Ha)  
