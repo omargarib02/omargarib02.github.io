@@ -1,6 +1,7 @@
 ---
 layout: single
-title: Home
+title: ""
+author_profile: true
 
 # Feature row for research thumbnails (add the three images below)
 research_cards:
