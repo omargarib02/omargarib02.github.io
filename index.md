@@ -43,7 +43,7 @@ sidebar:
 
 I build **multimodal, human‑in‑the‑loop intelligent systems** for safety‑critical autonomy, combining **speech**, **vision**, and **3D spatial reasoning**, and I also develop **automated document/knowledge‑extraction pipelines**.
 
-My research interests center on **human–AI/robot collaboration**: social and assistive robotics, **human‑aware** timing and intent inference, and perception‑driven decision making that people can trust. This aligns with work by **Cynthia Breazeal**, **Julie Shah**, **Andreea Bobu**, **Pattie Maes**, and **Luca Carlone** on human‑centered, interactive, and perception‑rich autonomy.
+My research interests center on **human–AI/robot collaboration**: social and assistive robotics, **human‑aware** timing and intent inference, and perception‑driven decision‑making that people can trust—especially in high‑stakes settings.
 
 ### Highlights
 - **AIRHILT** — an open simulation testbed for **multimodal AI copilots in aviation**. Models for ASR/vision/decision/TTS plug in via lightweight adapters, making it easy to swap architectures and **run hundreds of scripted terminal/en‑route scenarios** to measure assistant performance and ablations.
@@ -52,8 +52,11 @@ My research interests center on **human–AI/robot collaboration**: social and a
 
 ### Featured research
 {% include feature_row id="research_cards" %}
+  
+<!-- Blank line above and below ensures the following Markdown is parsed correctly -->
 
 ### Selected coursework
+
 | Course | Instructor |
 |---|---|
 | CS 6476 **Computer Vision** | Humphrey Shi |
