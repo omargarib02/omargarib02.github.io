@@ -1,0 +1,15 @@
+title: Omar Garib
+description: Intelligent systems · multimodal perception · human-in-the-loop autonomy
+theme: jekyll-theme-minimal
+logo: /assets/img/headshot.jpg
+show_downloads: false
+timezone: America/New_York
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+header_pages:
+  - research.md
+  - publications.md
+  - projects.md
+  - cv.md
+  - contact.md
