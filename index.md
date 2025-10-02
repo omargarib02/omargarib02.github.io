@@ -5,22 +5,17 @@ author_profile: true
 classes: wide
 ---
 
-<!--
-HOME LAYOUT
-- Left column = theme sidebar (profile + links + News) via _config.yml
-- Center column = About + Highlights
-- Right column = Featured Research + Selected Coursework
--->
-
 <div class="content-columns">
-  <!-- Center column -->
+
+  <!-- ===================== Center column ===================== -->
   <div class="content-columns__main">
     <h2>About</h2>
+
     <p><strong>I'm an MS student in Computational Science & Engineering at Georgia Tech</strong> (Aerospace Systems Design Lab, ASDL).</p>
 
     <p>I build <strong>multimodal, human-in-the-loop intelligent systems</strong> for safety-critical autonomy, combining <strong>speech</strong>, <strong>vision</strong>, and <strong>3D spatial reasoning</strong>, and I also develop <strong>automated document/knowledge-extraction pipelines</strong>.</p>
 
-    <p>My research interests center on <strong>human–AI/robot collaboration</strong>: social and assistive robotics, <strong>human-aware</strong> timing and intent inference, and perception-driven decision-making that people can trust—especially in high-stakes settings.</p>
+    <p>My research interests center on <strong>human–AI/robot collaboration</strong>: social and assistive robotics, <strong>human‑aware</strong> timing and intent inference, and perception‑driven decision‑making that people can trust—especially in high‑stakes settings.</p>
 
     <h3>Highlights</h3>
     <ul>
@@ -30,40 +25,35 @@ HOME LAYOUT
     </ul>
   </div>
 
-  <!-- Right column -->
-  <aside class="content-columns__aside">
+  <!-- ===================== Right column ====================== -->
+  <div class="content-columns__aside">
     <h2>Featured Research</h2>
 
-    <div class="research-cards">
-      <div class="research-card">
-        <img src="/assets/img/research/airhilt_scenarios.png" alt="AIRHILT scenario montage">
-        <h4>AIRHILT testbed</h4>
-        <p>Open simulation for pilot/air traffic control‑in‑the‑loop evaluation.</p>
-        <a href="/research/#airhilt" class="btn btn--primary">Read more</a>
-      </div>
+    <div class="research-card">
+      <img src="/assets/img/research/airhilt_scenarios.png" alt="AIRHILT scenario montage">
+      <h4>AIRHILT testbed</h4>
+      <p>Open simulation for pilot/air traffic control‑in‑the‑loop evaluation.</p>
+      <a href="/research/#airhilt" class="btn btn--primary">Read more</a>
+    </div>
 
-      <div class="research-card">
-        <img src="/assets/img/research/simugan_spectrogram.png" alt="Spectrogram comparison (SimuGAN‑Whisper‑ATC)">
-        <h4>SimuGAN‑Whisper‑ATC</h4>
-        <p>GAN‑based noise modeling for ATC audio; robust Whisper fine‑tuning.</p>
-        <a href="/research/#simugan-whisper-atc" class="btn btn--primary">Read more</a>
-      </div>
+    <div class="research-card">
+      <img src="/assets/img/research/simugan_spectrogram.png" alt="Spectrogram comparison">
+      <h4>SimuGAN‑Whisper‑ATC</h4>
+      <p>GAN‑based noise modeling for ATC audio; robust Whisper fine‑tuning.</p>
+      <a href="/research/#simugan-whisper-atc" class="btn btn--primary">Read more</a>
+    </div>
 
-      <div class="research-card">
-        <img src="/assets/img/research/metadata_pipeline.png" alt="Multimodal metadata pipeline">
-        <h4>Multimodal metadata tagging</h4>
-        <p>OCR + VLM + RAG to structure engineering knowledge.</p>
-        <a href="/research/#metadata-extraction" class="btn btn--primary">Read more</a>
-      </div>
+    <div class="research-card">
+      <img src="/assets/img/research/metadata_pipeline.png" alt="Multimodal metadata pipeline">
+      <h4>Multimodal metadata tagging</h4>
+      <p>OCR + VLM + RAG to structure engineering knowledge.</p>
+      <a href="/research/#metadata-extraction" class="btn btn--primary">Read more</a>
     </div>
 
     <h3>Selected Coursework</h3>
     <table>
       <thead>
-        <tr>
-          <th>Course</th>
-          <th>Instructor</th>
-        </tr>
+        <tr><th>Course</th><th>Instructor</th></tr>
       </thead>
       <tbody>
         <tr><td>CS 6476 <strong>Computer Vision</strong></td><td>Humphrey Shi</td></tr>
@@ -75,5 +65,6 @@ HOME LAYOUT
         <tr><td>CSE 6730 <strong>Modeling & Simulation</strong></td><td>—</td></tr>
       </tbody>
     </table>
-  </aside>
+  </div>
+
 </div>
