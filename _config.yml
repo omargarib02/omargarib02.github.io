@@ -37,7 +37,7 @@ defaults:
     values:
       layout: single
       toc: false
-      author_profile: false
+      author_profile: true  # Ensure this is true for all pages
       comments: false
   - scope:
       path: ""
@@ -47,10 +47,10 @@ defaults:
       sidebar:
         - title: "News"
           text: |
-            <ul style="list-style: none; padding: 0;">
-              <li style="margin: 0.6rem 0;"><strong>September 2025</strong> — Began research effort on designing an effective, personalized AI companion for the elderly.</li>
-              <li style="margin: 0.6rem 0;"><strong>September 2025</strong> — Submitted <strong>AIRHILT</strong> to ICRA.</li>
-              <li style="margin: 0.6rem 0;"><strong>August 2025</strong> — Two <strong>AIAA SciTech</strong> abstracts accepted.</li>
-              <li style="margin: 0.6rem 0;"><strong>May 2025</strong> — Began research collaboration with <strong>NASA Langley</strong> (Digital Transformation).</li>
+            <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.9rem;">
+              <li style="margin: 0.8rem 0; line-height: 1.4;"><strong style="display: block; margin-bottom: 0.2rem;">September 2025</strong>Began research effort on designing an effective, personalized AI companion for the elderly.</li>
+              <li style="margin: 0.8rem 0; line-height: 1.4;"><strong style="display: block; margin-bottom: 0.2rem;">September 2025</strong>Submitted <strong>AIRHILT</strong> to ICRA.</li>
+              <li style="margin: 0.8rem 0; line-height: 1.4;"><strong style="display: block; margin-bottom: 0.2rem;">August 2025</strong>Two <strong>AIAA SciTech</strong> abstracts accepted.</li>
+              <li style="margin: 0.8rem 0; line-height: 1.4;"><strong style="display: block; margin-bottom: 0.2rem;">May 2025</strong>Began research collaboration with <strong>NASA Langley</strong> (Digital Transformation).</li>
             </ul>
 timezone: America/New_York
