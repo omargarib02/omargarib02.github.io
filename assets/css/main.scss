@@ -16,60 +16,60 @@ a { text-decoration: underline; text-underline-offset: 2px; }
 a:hover { text-decoration: none; }
 .page__content img { border-radius: 6px; }
 
-/* ----------------------- Sidebar / author card ----------------------- */
-/* Widen the left rail and allow a much larger rectangular portrait */
-.page__sidebar { 
-  flex: 0 0 400px !important;   /* width of the left column */
+/* ----------------------- Sidebar / author card -----------------------
+   Minimal Mistakes uses .sidebar for the column that holds author + extras.
+   Make the column wider and the portrait much larger. */
+.sidebar {
+  flex: 0 0 400px !important;     /* width of the left column */
   max-width: 400px !important;
 }
 @media (max-width: 1200px) {
-  .page__sidebar { flex-basis: 360px !important; max-width: 360px !important; }
+  .sidebar { flex-basis: 360px !important; max-width: 360px !important; }
 }
 @media (max-width: 1024px) {
-  .page__sidebar { flex-basis: 320px !important; max-width: 320px !important; }
+  .sidebar { flex-basis: 320px !important; max-width: 320px !important; }
 }
 @media (max-width: 768px) {
-  .page__sidebar, .page__content { flex-basis: 100% !important; max-width: 100% !important; }
+  .sidebar { flex-basis: 100% !important; max-width: 100% !important; }
 }
 
 /* Bigger rectangular avatar, centered */
-.page__sidebar .author__avatar {
-  width: 340px !important;             /* >35% larger than before */
+.sidebar .author__avatar {
+  width: 340px !important;             /* >35% larger */
   height: auto;
   margin: 0 auto 1rem auto;
   border-radius: 12px !important;      /* rectangular with soft corners */
   overflow: hidden;
 }
-.page__sidebar .author__avatar img {
+.sidebar .author__avatar img {
   display: block;
   width: 100% !important;
   height: auto !important;
   border-radius: 12px !important;
 }
 /* Remove circular mask some skins add */
-.page__sidebar .author__avatar:before { display: none !important; }
+.sidebar .author__avatar:before { display: none !important; }
 
 /* Center the name and links under the photo */
-.page__sidebar .author__content,
-.page__sidebar .author__urls-wrapper { text-align: center !important; }
+.sidebar .author__content,
+.sidebar .author__urls-wrapper { text-align: center !important; }
 
 /* Keep the link list readable while centering the block */
-.page__sidebar .author__urls { 
+.sidebar .author__urls { 
   display: inline-block; 
   text-align: left; 
   margin: 0.35rem auto 0 auto; 
 }
 
-/* Sidebar section headings (e.g., News) centered for balance */
-.page__sidebar h3 { text-align: center; }
+.sidebar h3 { text-align: center; }
 
 /* News list styling in the sidebar */
-.page__sidebar ul.news { 
+.sidebar ul.news { 
   list-style: disc; 
   margin: 0.25rem 0 0 1.25rem; 
   padding: 0;
 }
-.page__sidebar ul.news li { margin: 0.35rem 0; }
+.sidebar ul.news li { margin: 0.35rem 0; }
 
 /* ----------------------- Feature cards (buttons stay green) ----------------------- */
 .btn--primary {
@@ -103,3 +103,13 @@ a:hover { text-decoration: none; }
 }
 /* Comfortable spacing between cards */
 .feature__wrapper { gap: 1.25rem; }
+
+/* ----------------------- Coursework table readability ----------------------- */
+.page__content table {
+  font-size: 0.95rem;
+}
+.page__content table th,
+.page__content table td {
+  padding: 0.35rem 0.6rem;
+  vertical-align: top;
+}
