@@ -3,6 +3,15 @@ layout: single
 title: ""
 author_profile: true
 
+# Sidebar blocks beneath the author profile (News goes here)
+sidebar:
+  - title: "News"
+    text: |
+      - **September 2025** — Began research effort on designing an effective, personalized AI companion for the elderly.
+      - **September 2025** — Submitted **AIRHILT** to ICRA.
+      - **August 2025** — Two **AIAA SciTech** abstracts accepted.
+      - **May 2025** — Began research collaboration with **NASA Langley** (Digital Transformation).
+
 # Featured research cards (order: AIRHILT → SimuGAN → Metadata)
 research_cards:
   - image_path: /assets/img/research/airhilt_scenarios.png
@@ -40,16 +49,10 @@ My research interests include **human–robot teaming** and **social/assistive r
 - **SimuGAN‑Whisper‑ATC** — learned very‑high‑frequency radio noise + ASR fine‑tuning; **large word‑error‑rate reduction** on real **air traffic control**.
 - **LLM/RAG document extraction** — multimodal mining of engineering PDFs for **metadata & discovery**.
 
-### News
-- **September 2025** — Began research effort on designing an effective, personalized AI companion for the elderly.
-- **September 2025** — Submitted **AIRHILT** to ICRA.
-- **August 2025** — Two **AIAA SciTech** abstracts accepted.
-- **May 2025** — Began research collaboration with **NASA Langley** (Digital Transformation).
+### Featured research
+{% include feature_row id="research_cards" %}  <!-- grid; 3-up on desktop -->
 
 ### Selected coursework
 CS 6476 **Computer Vision** (Humphrey Shi) · CS 7650 **Natural Language Processing** (Alan Ritter) ·  
 CS 8803 **Deep Reinforcement Learning** (Sehoon Ha) · CSE 6740 **Machine Learning** ·  
 CSE 6643 **Numerical Linear Algebra** · CSE 6140 **Algorithms** · CSE 6730 **Modeling & Simulation**
-
-### Featured research
-{% include feature_row id="research_cards" %}  <!-- default = responsive grid; 3-up on desktop -->
