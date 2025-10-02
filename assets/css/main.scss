@@ -17,28 +17,28 @@ a:hover { text-decoration: none; }
 .page__content img { border-radius: 6px; }
 
 /* ----------------------- Two-column layout ----------------------- */
-/* Wider container so the content (right column) has more space */
+/* Slightly wider canvas so right column still breathes after enlarging avatar */
 .layout--single {
-  max-width: 1320px !important;   /* was 1180px */
+  max-width: 1440px !important;   /* was 1320 */
   margin: 0 auto !important;
   padding: 2rem !important;
 }
 @media (max-width: 768px){ .layout--single { padding: 1rem !important; }}
 
-/* Narrower sidebar so the content column grows */
+/* Left rail widened to hold a ~30% larger portrait */
 .sidebar {
-  flex: 0 0 320px !important;      /* was 360px */
-  max-width: 320px !important;
+  flex: 0 0 400px !important;      /* was 320 */
+  max-width: 400px !important;
   padding: 0 !important;
 }
 .sidebar__inner { padding: 0 20px !important; }
 .sidebar .author { text-align: center !important; }
 
-/* Rectangular portrait */
+/* >>> Profile image: larger (~30%), rectangular, and NOT hoverable <<< */
 .sidebar .author__avatar {
   width: calc(100% - 40px) !important;
-  max-width: 300px !important;     /* keep it visually large within 320px rail */
-  margin: 20px auto 20px auto !important;
+  max-width: 390px !important;     /* ~30% up from 300 */
+  margin: 24px auto !important;
   border-radius: 0 !important;
   overflow: hidden !important;
 }
@@ -47,13 +47,26 @@ a:hover { text-decoration: none; }
   height: auto !important;
   object-fit: cover !important;
   border-radius: 12px !important;
+
+  /* kill any theme hover/transition effects */
+  filter: none !important;
+  opacity: 1 !important;
+  transform: none !important;
+  transition: none !important;
 }
-.sidebar .author__avatar:before,
-.sidebar .author__avatar:after { display: none !important; }
+/* If the avatar is wrapped in a link, disable its hover interactivity */
+.sidebar .author__avatar a {
+  pointer-events: none !important;
+}
+.sidebar .author__avatar img:hover {
+  filter: none !important;
+  opacity: 1 !important;
+  transform: none !important;
+}
 
 /* Author name and links */
 .sidebar .author__name {
-  font-size: 1.4rem !important;
+  font-size: 1.45rem !important;
   font-weight: 700 !important;
   margin: 0 0 .75rem 0 !important;
 }
@@ -81,20 +94,28 @@ a:hover { text-decoration: none; }
 }
 
 /* ----------------------- Featured research cards ----------------------- */
+/* Keep cards static—no hover lift/contrast */
 .feature__wrapper { gap: 1.25rem !important; margin-top: .75rem !important; }
 .feature__item{
   border-radius: 8px !important;
   overflow: hidden !important;
   box-shadow: 0 2px 8px rgba(0,0,0,0.08) !important;
-  transition: transform .2s ease, box-shadow .2s ease !important;
+  transition: none !important;               /* stop animated lift */
 }
-.feature__item:hover{ transform: translateY(-2px) !important; box-shadow: 0 4px 16px rgba(0,0,0,0.12) !important; }
-.feature__item .archive__item-title{
-  white-space: normal !important;
-  overflow: visible !important;
-  text-overflow: initial !important;
-  font-weight: 600 !important;
+.feature__item:hover{
+  transform: none !important;                /* no move on hover */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08) !important;
 }
+/* Remove any image dim/brighten behavior the theme may apply */
+.feature__item .archive__item-teaser img,
+.feature__item .archive__item-teaser img:hover{
+  filter: none !important;
+  opacity: 1 !important;
+  transform: none !important;
+  transition: none !important;
+}
+.feature__item a,
+.feature__item a:hover{ box-shadow: none !important; }
 
 /* ----------------------- Coursework table ----------------------- */
 .page__content table{
@@ -119,3 +140,9 @@ a:hover { text-decoration: none; }
 html { scroll-behavior: smooth !important; }
 *:focus { outline: 2px solid #16a34a !important; outline-offset: 2px !important; }
 .initial-content, .wrapper, body { overflow-x: hidden !important; }
+
+/* Responsive – on small screens, fall back to single column */
+@media (max-width: 900px){
+  .sidebar { flex: 0 0 100% !important; max-width: 100% !important; }
+  .sidebar .author__avatar { max-width: 320px !important; }
+}
