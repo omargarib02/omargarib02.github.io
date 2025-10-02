@@ -3,7 +3,44 @@
 @import "minimal-mistakes/skins/contrast"; // black & white skin
 @import "minimal-mistakes";
 
-// Small, tasteful tweaks
-a { text-decoration: underline; text-underline-offset: 2px; }
-a:hover { text-decoration: none; }
-.page__content img { border-radius: 4px; }
+/* ---------- Links & images ---------- */
+a {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+a:hover {
+  text-decoration: none;
+}
+.page__content img {
+  border-radius: 4px;
+}
+
+/* ---------- Button color: make primary = green ---------- */
+.btn--primary {
+  background-color: #16a34a;   /* green-600 */
+  border-color:     #16a34a;
+  color: #fff;
+}
+.btn--primary:hover,
+.btn--primary:focus {
+  background-color: #0f8a3b;   /* darker green */
+  border-color:     #0f8a3b;
+  color: #fff;
+}
+
+/* ---------- Slightly reduce overall sizing ---------- */
+html { font-size: 16px; }                /* theme feels large; dial to ~16px */
+.page__title { font-size: 1.9rem; }      /* big H1 on pages */
+h2 { font-size: 1.35rem; }
+h3 { font-size: 1.15rem; }
+
+/* Optional: make top nav a touch smaller */
+.site-nav .page-link { font-size: 0.95rem; }
+
+/* ---------- Feature row usability ---------- */
+/* Allow titles to wrap instead of truncating with ellipsis */
+.feature__item .archive__item-title {
+  white-space: normal;
+  overflow: visible;
+  text-overflow: initial;
+}
