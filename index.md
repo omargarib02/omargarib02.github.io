@@ -5,10 +5,15 @@ author_profile: true
 classes: wide
 ---
 
-<div class="content-columns">
+<!--
+  HOME GRID
+  Left column = theme sidebar (author_profile + News)
+  Center + Right columns = this grid
+-->
+<div class="home-grid">
 
   <!-- ===================== Center column ===================== -->
-  <div class="content-columns__main">
+  <div class="home-grid__main">
     <h2>About</h2>
 
     <p><strong>I'm an MS student in Computational Science & Engineering at Georgia Tech</strong> (Aerospace Systems Design Lab, ASDL).</p>
@@ -26,7 +31,7 @@ classes: wide
   </div>
 
   <!-- ===================== Right column ====================== -->
-  <div class="content-columns__aside">
+  <div class="home-grid__aside">
     <h2>Featured Research</h2>
 
     <div class="research-card">
