@@ -3,42 +3,81 @@
 @import "minimal-mistakes/skins/contrast"; // black & white skin
 @import "minimal-mistakes";
 
-/* ---------- Links & images ---------- */
+/* ----------------------- Links & images ----------------------- */
 a {
   text-decoration: underline;
   text-underline-offset: 2px;
 }
-a:hover {
-  text-decoration: none;
-}
-.page__content img {
-  border-radius: 4px;
-}
+a:hover { text-decoration: none; }
 
-/* ---------- Button color: make primary = green ---------- */
+/* Research images, etc. */
+.page__content img { border-radius: 4px; }
+
+/* ----------------------- Buttons: make primary = green ----------------------- */
 .btn--primary {
-  background-color: #16a34a;   /* green-600 */
-  border-color:     #16a34a;
-  color: #fff;
+  background-color: #16a34a !important;   /* green-600 */
+  border-color:     #16a34a !important;
+  color: #fff !important;
 }
 .btn--primary:hover,
 .btn--primary:focus {
-  background-color: #0f8a3b;   /* darker green */
-  border-color:     #0f8a3b;
-  color: #fff;
+  background-color: #0f8a3b !important;   /* darker green */
+  border-color:     #0f8a3b !important;
+  color: #fff !important;
 }
 
-/* ---------- Slightly reduce overall sizing ---------- */
-html { font-size: 16px; }                /* theme feels large; dial to ~16px */
-.page__title { font-size: 1.9rem; }      /* big H1 on pages */
-h2 { font-size: 1.35rem; }
-h3 { font-size: 1.15rem; }
+/* Some components generate their own button classes; normalize them too */
+ a.btn, .btn {
+  border-radius: 6px;
+}
+ .archive__item-excerpt + p .btn--primary { /* button inside feature_row */
+  background-color: #16a34a !important;
+  border-color:     #16a34a !important;
+}
 
-/* Optional: make top nav a touch smaller */
+/* ----------------------- Reduce overall sizing ----------------------- */
+/* Base size */
+html { font-size: 15.5px; }   /* try 15–16; adjust to taste */
+
+/* Top nav a bit smaller */
 .site-nav .page-link { font-size: 0.95rem; }
 
-/* ---------- Feature row usability ---------- */
-/* Allow titles to wrap instead of truncating with ellipsis */
+/* Page title and headings */
+.page__title { font-size: 1.7rem; }     /* big H1 on pages */
+h2 { font-size: 1.25rem; }
+h3 { font-size: 1.10rem; }
+
+/* Tighten vertical rhythm a touch */
+.page__content p { line-height: 1.55; }
+
+/* ----------------------- Author profile: square + larger ----------------------- */
+.sidebar {
+  /* allow a touch more width for the author box so a larger image fits */
+  max-width: 260px;
+}
+.author__avatar {
+  /* remove circular crop from the skin */
+  border-radius: 6px !important;   /* square with mild rounding */
+  overflow: hidden;
+  width: 180px;                     /* larger avatar */
+  height: auto;                     /* preserve aspect ratio */
+  margin: 0 auto 0.5rem auto;
+}
+.author__avatar img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 6px !important;    /* ensure image matches container */
+}
+
+/* If the skin enforces circle with ::before, neutralize it */
+.author__avatar:before { display: none !important; }
+
+/* Author name spacing smaller */
+.author__name { font-size: 1.05rem; }
+
+/* ----------------------- Feature row usability ----------------------- */
+/* Allow titles to wrap instead of truncating */
 .feature__item .archive__item-title {
   white-space: normal;
   overflow: visible;
