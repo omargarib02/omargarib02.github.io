@@ -4,8 +4,7 @@
 @import "minimal-mistakes";
 
 /* ----------------------- Typography ----------------------- */
-/* Slightly smaller overall typography for a tighter, more professional feel */
-html { font-size: 15px; }                /* was ~16px */
+html { font-size: 15px; }                /* slightly smaller than default */
 .site-nav .page-link { font-size: 0.92rem; }
 .page__title { font-size: 1.6rem; }
 h2 { font-size: 1.22rem; }
@@ -18,21 +17,22 @@ a:hover { text-decoration: none; }
 .page__content img { border-radius: 6px; }
 
 /* ----------------------- Sidebar / author card ----------------------- */
-/* Allow a wider author card so a larger rectangular image fits */
-.sidebar { max-width: 300px; }
+/* Give the sidebar a touch more width so a larger rectangular avatar fits */
+.sidebar { max-width: 340px; }  /* was 300px */
 
+/* ~35% larger avatar, rectangular with soft corners */
 .author__avatar {
-  width: 220px;          /* bigger than default */
+  width: 300px;                /* was 220px */
   height: auto;
   margin: 0 auto 0.75rem auto;
-  border-radius: 8px !important;   /* rectangular with soft corners */
+  border-radius: 8px !important;
   overflow: hidden;
 }
 .author__avatar img {
   display: block;
   width: 100%;
   height: auto;
-  border-radius: 8px !important;   /* ensure image matches container */
+  border-radius: 8px !important;
 }
 .author__avatar:before { display: none !important; }  /* remove circular mask */
 .author__name { font-size: 1.05rem; }
