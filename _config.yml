@@ -21,7 +21,6 @@ kramdown:
 author:
   name: Omar Garib
   avatar: /assets/img/headshot.jpg
-  email: ogarib@gatech.edu
   bio: false
   links:
     - label: CV
