@@ -46,19 +46,3 @@ My research interests center on **human–AI/robot collaboration**: social and a
 
 ## Featured research
 {% include feature_row id="research_cards" %}
-
-## Selected coursework
-<table>
-  <thead>
-    <tr><th>Course</th><th>Instructor</th></tr>
-  </thead>
-  <tbody>
-    <tr><td>CS 6476 <strong>Computer Vision</strong></td><td>Humphrey Shi</td></tr>
-    <tr><td>CS 7650 <strong>Natural Language Processing</strong></td><td>Alan Ritter</td></tr>
-    <tr><td>CS 8803 <strong>Deep Reinforcement Learning</strong></td><td>Sehoon Ha</td></tr>
-    <tr><td>CSE 6740 <strong>Machine Learning</strong></td><td>—</td></tr>
-    <tr><td>CSE 6643 <strong>Numerical Linear Algebra</strong></td><td>—</td></tr>
-    <tr><td>CSE 6140 <strong>Algorithms</strong></td><td>—</td></tr>
-    <tr><td>CSE 6730 <strong>Modeling & Simulation</strong></td><td>—</td></tr>
-  </tbody>
-</table>
