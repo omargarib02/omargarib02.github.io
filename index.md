@@ -37,7 +37,7 @@ research_cards:
 
 I build **multimodal, human‑in‑the‑loop intelligent systems** for safety‑critical autonomy, combining **speech**, **vision**, and **3D spatial reasoning**, and I also develop **automated document/knowledge‑extraction pipelines**.
 
-My research interests center on **human–AI/robot collaboration**: social and assistive robotics, **human‑aware** timing and intent inference, and perception‑driven decision‑making that people can trust—especially in high‑stakes settings.
+My research interests center on human–AI/robot collaboration, social and assistive robotics, and building mutlimodal intelligent systems that integrate vision, speech, and spatial reasoning in safety-critical environments.
 
 ## Highlights
 - **AIRHILT** — an open simulation testbed for **multimodal AI copilots in aviation**. Models for ASR/vision/decision/TTS plug in via lightweight adapters, making it easy to swap architectures and **run hundreds of scripted terminal/en‑route scenarios** to measure assistant performance and ablations.
