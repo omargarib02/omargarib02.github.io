@@ -4,12 +4,12 @@ title: Publications
 permalink: /publications/
 ---
 
-**Bold denotes my name.** Status shown explicitly.
+Status shown explicitly.
 
 1. **O. Garib**, J. D. Kambhampaty, O. J. Pinon Fischer, D. N. Mavris.  
    *Title withheld for double‑anonymous review (human‑in‑the‑loop multimodal aviation testbed).*  
    Major robotics/ML conference (double‑anonymous review), **in submission**.  
-   [Project](/research/#aviation-testbed) · PDF (coming soon)
+   **Preprint:** [PDF](/assets/papers/aviation_testbed_preprint.pdf)
 
 2. **O. Garib**, M. Ghanem, O. J. Pinon Fischer, D. N. Mavris.  
    *SimuGAN‑Whisper‑ATC: Generative Noise Injection for Improved ASR in Air Traffic Control.*  
