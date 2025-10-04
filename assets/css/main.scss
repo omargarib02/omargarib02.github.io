@@ -4,13 +4,13 @@ title: ""
 author_profile: true
 classes: wide
 
-# Featured research cards (AIRHILT → SimuGAN → Metadata)
+# Featured research cards (Aviation testbed → SimuGAN → Metadata)
 research_cards:
   - image_path: /assets/img/research/airhilt_scenarios.png
-    alt: "AIRHILT scenario montage"
-    title: "AIRHILT testbed"
+    alt: "Aviation testbed scenario montage"
+    title: "Human‑in‑the‑Loop Aviation Testbed"
     excerpt: "Open simulation for pilot/air traffic control‑in‑the‑loop evaluation."
-    url: /research/#airhilt
+    url: /research/#aviation-testbed
     btn_label: "Read more"
     btn_class: "btn--primary"
 
@@ -40,7 +40,7 @@ I build **multimodal, human‑in‑the‑loop intelligent systems** for safety�
 My research interests center on **human–AI/robot collaboration**: social and assistive robotics, **human‑aware** timing and intent inference, and perception‑driven decision‑making that people can trust—especially in high‑stakes settings.
 
 ## Highlights
-- **AIRHILT** — an open simulation testbed for **multimodal AI copilots in aviation**. Models for ASR/vision/decision/TTS plug in via lightweight adapters, making it easy to swap architectures and **run hundreds of scripted terminal/en‑route scenarios** to measure assistant performance and ablations.
+- **Human‑in‑the‑Loop Aviation Testbed** — an open simulation testbed for **multimodal AI copilots in aviation**. Models for ASR/vision/decision/TTS plug in via lightweight adapters, making it easy to swap architectures and **run hundreds of scripted terminal/en‑route scenarios** to measure assistant performance and ablations.
 - **SimuGAN‑Whisper‑ATC** — a **GAN‑based noise‑modeling pipeline** that captures air‑traffic‑control radio artifacts and **injects them during Whisper fine‑tuning**, yielding a **WER drop from 14.66 → 3.58** on real ATC audio.
 - **LLM/RAG document extraction** — multimodal mining of engineering **artifacts** for **metadata & discovery**.
 
