@@ -5,6 +5,27 @@
 @import "minimal-mistakes/skins/contrast";
 @import "minimal-mistakes";
 
-/* Optional place for your custom CSS. Example:
-.custom-callout { padding: .75rem 1rem; border: 1px solid #ddd; border-radius: .25rem; }
-*/
+/* ---------- Custom overrides ---------- */
+
+/* Make the sidebar headshot rectangular and larger */
+.author__avatar {
+  /* default size on phones/tablets */
+  width: 220px !important;
+  margin: 0 auto 1rem !important; /* center it */
+}
+
+.author__avatar img {
+  display: block;
+  width: 100%;
+  height: auto;          /* keep your photo's aspect ratio */
+  border-radius: 0 !important;  /* rectangular (no circle) */
+  box-shadow: none;      /* optional: remove any shadow */
+  border: 0;
+}
+
+/* Bump it bigger on wide screens */
+@media (min-width: 1200px) {
+  .author__avatar {
+    width: 280px !important;
+  }
+}
