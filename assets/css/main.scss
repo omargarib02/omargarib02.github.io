@@ -1,7 +1,6 @@
 ---
 # Only the main Sass file needs front matter
 ---
-
 @import "minimal-mistakes/skins/contrast";
 @import "minimal-mistakes";
 
@@ -26,6 +25,24 @@ html {
   border-radius: 0 !important;       /* rectangular */
   box-shadow: none;
   border: 0;
+  opacity: 1 !important;             /* full opacity */
+  filter: none !important;           /* no filters */
+  transition: none !important;       /* disable transitions */
+}
+
+/* Prevent hover effects on the avatar */
+.author__avatar:hover img,
+.author__avatar img:hover {
+  opacity: 1 !important;             /* maintain full opacity on hover */
+  filter: none !important;           /* no filter changes on hover */
+  transform: none !important;        /* no transform on hover */
+  box-shadow: none !important;       /* no shadow on hover */
+}
+
+/* Remove any link styling if the avatar is wrapped in a link */
+.author__avatar a {
+  pointer-events: none !important;   /* make non-clickable */
+  cursor: default !important;        /* default cursor instead of pointer */
 }
 
 @media (min-width: 1200px) {
