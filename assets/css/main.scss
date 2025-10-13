@@ -19,6 +19,20 @@ html {
   display: table !important;
 }
 
+/* For custom sidebar images */
+.sidebar__right .sidebar__item img,
+.sidebar .sidebar__item img {
+  width: 372px !important;
+  height: auto !important;
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  display: block !important;
+  margin: 0 auto 1rem !important;
+  pointer-events: none !important;
+  cursor: default !important;
+}
+
 .author__avatar img {
   display: block !important;
   width: 100% !important;
@@ -81,6 +95,10 @@ html {
   .author__avatar { 
     width: 473px !important;
   }
+  .sidebar__right .sidebar__item img,
+  .sidebar .sidebar__item img {
+    width: 473px !important;
+  }
 }
 
 /* 3) Change red "Read more" buttons to green */
@@ -117,4 +135,10 @@ a[href*="Read more"]:hover,
 .archive__item a[href*="Read more"]:hover {
   background-color: #229954 !important;
   color: #fff !important;
+}
+
+/* Hide bottom left arrow/back-to-top button */
+.back-to-top,
+.page__footer-follow {
+  display: none !important;
 }
