@@ -12,9 +12,9 @@ html {
   font-size: 70% !important;
 }
 
-/* 2) Sidebar headshot: rectangular, 30% larger, with light border */
+/* 2) Sidebar headshot: rectangular, 60% larger, no border */
 .author__avatar {
-  width: 286px !important;
+  width: 372px !important;
   margin: 0 auto 1rem !important;
   display: table !important;
 }
@@ -25,7 +25,7 @@ html {
   height: auto !important;
   border-radius: 0 !important;
   box-shadow: none !important;
-  border: 2px solid #e0e0e0 !important;
+  border: none !important;
   opacity: 1 !important;
   filter: none !important;
   -webkit-filter: none !important;
@@ -66,7 +66,7 @@ html {
   -webkit-filter: none !important;
   transform: none !important;
   box-shadow: none !important;
-  border: 2px solid #e0e0e0 !important;
+  border: none !important;
   transition: none !important;
 }
 
@@ -79,7 +79,7 @@ html {
 
 @media (min-width: 1024px) {
   .author__avatar { 
-    width: 364px !important;
+    width: 473px !important;
   }
 }
 
