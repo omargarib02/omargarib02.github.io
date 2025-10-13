@@ -46,20 +46,8 @@ defaults:
       path: ""
       type: pages
     values:
-      author_profile: false
+      author_profile: true
       sidebar:
-        - image: /assets/img/headshot.jpg
-          image_alt: "Omar Garib"
-        - title: "Omar Garib"
-          text: |
-            <div class="author__urls-wrapper">
-              <ul class="author__urls social-icons" style="list-style: none; padding: 0; margin: 0;">
-                <li><a href="/assets/cv/Omar_Garib_CV.pdf"><i class="far fa-file-alt" aria-hidden="true"></i> CV</a></li>
-                <li><a href="https://github.com/omargarib02"><i class="fab fa-github" aria-hidden="true"></i> GitHub</a></li>
-                <li><a href="https://www.linkedin.com/in/omargarib/"><i class="fab fa-linkedin" aria-hidden="true"></i> LinkedIn</a></li>
-                <li><a href="mailto:ogarib@gatech.edu"><i class="fas fa-envelope" aria-hidden="true"></i> Email</a></li>
-              </ul>
-            </div>
         - title: "News"
           text: |
             <ul style="list-style: none; padding: 0; margin: 0;">
