@@ -1,84 +1,96 @@
 ---
 # Only the main Sass file needs front matter
 ---
+@charset "utf-8";
+
 @import "minimal-mistakes/skins/contrast";
 @import "minimal-mistakes";
 
 /* ---------- Custom overrides ---------- */
 
-/* 1) Global type scale (~30% smaller).
-   This affects all rem/em-based text across the site (content, nav, sidebar). */
+/* 1) Global type scale (~30% smaller) */
 html {
-  font-size: 70% !important; /* 16px -> ~11.2px base */
+  font-size: 70% !important;
 }
 
 /* 2) Sidebar headshot: rectangular, 30% larger, with light border */
 .author__avatar {
-  width: 286px !important;          /* 30% larger than 220px */
-  margin: 0 auto 1rem !important;   /* center */
-  display: table !important;        /* ensure proper containment */
+  width: 286px !important;
+  margin: 0 auto 1rem !important;
+  display: table !important;
 }
 
 .author__avatar img {
-  display: block;
-  width: 100%;
-  height: auto;                      /* preserve aspect ratio */
-  border-radius: 0 !important;       /* rectangular */
+  display: block !important;
+  width: 100% !important;
+  height: auto !important;
+  border-radius: 0 !important;
   box-shadow: none !important;
-  border: 2px solid #e0e0e0 !important;  /* light gray border */
-  opacity: 1 !important;             /* full opacity */
-  filter: none !important;           /* no filters */
-  transition: none !important;       /* disable transitions */
-}
-
-/* Prevent hover effects on the avatar - more aggressive overrides */
-.author__avatar:hover,
-.author__avatar:hover img,
-.author__avatar img:hover,
-a.author__avatar:hover img,
-.author__avatar a:hover img {
-  opacity: 1 !important;             /* maintain full opacity on hover */
-  filter: none !important;           /* no filter changes on hover */
-  transform: none !important;        /* no transform on hover */
-  box-shadow: none !important;       /* no shadow on hover */
-  border: 2px solid #e0e0e0 !important;  /* maintain border on hover */
-}
-
-/* Remove any link styling if the avatar is wrapped in a link */
-.author__avatar a,
-a.author__avatar {
-  pointer-events: none !important;   /* make non-clickable */
-  cursor: default !important;        /* default cursor instead of pointer */
-  text-decoration: none !important;  /* no underline */
-}
-
-/* Disable grayscale filter that might be applied by the theme */
-.sidebar .author__avatar img {
+  border: 2px solid #e0e0e0 !important;
+  opacity: 1 !important;
   filter: none !important;
   -webkit-filter: none !important;
+  transition: none !important;
+  transform: none !important;
 }
 
-@media (min-width: 1200px) {
-  .author__avatar { width: 364px !important; }  /* 30% larger than 280px */
+/* Force no hover effects */
+.sidebar .author__avatar:hover img,
+.sidebar .author__avatar img:hover,
+.author__content .author__avatar:hover img,
+.author__content .author__avatar img:hover {
+  opacity: 1 !important;
+  filter: none !important;
+  -webkit-filter: none !important;
+  transform: none !important;
+  box-shadow: none !important;
+  border: 2px solid #e0e0e0 !important;
 }
 
-/* 3) Change red buttons to green */
-.btn--danger,
-.btn--primary,
+/* Disable link behavior */
+.author__avatar a {
+  pointer-events: none !important;
+  cursor: default !important;
+}
+
+@media (min-width: 1024px) {
+  .author__avatar { 
+    width: 364px !important;
+  }
+}
+
+/* 3) Change red "Read more" buttons to green */
+.archive__item .btn,
+.archive__item-excerpt + p a,
 a.btn--danger,
 a.btn--primary,
-[href*="Read more"] {
-  background-color: #27ae60 !important;  /* Green color */
+.btn--danger,
+.btn--primary {
+  background-color: #27ae60 !important;
   color: #fff !important;
-  border: none !important;
+  border-color: #27ae60 !important;
 }
 
-/* Hover state for green buttons */
-.btn--danger:hover,
-.btn--primary:hover,
+.archive__item .btn:hover,
+.archive__item-excerpt + p a:hover,
 a.btn--danger:hover,
 a.btn--primary:hover,
-[href*="Read more"]:hover {
-  background-color: #229954 !important;  /* Darker green on hover */
+.btn--danger:hover,
+.btn--primary:hover {
+  background-color: #229954 !important;
+  color: #fff !important;
+  border-color: #229954 !important;
+}
+
+/* Target "Read more" links specifically */
+a[href*="Read more"],
+.archive__item a[href*="Read more"] {
+  background-color: #27ae60 !important;
+  color: #fff !important;
+}
+
+a[href*="Read more"]:hover,
+.archive__item a[href*="Read more"]:hover {
+  background-color: #229954 !important;
   color: #fff !important;
 }
