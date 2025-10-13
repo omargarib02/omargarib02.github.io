@@ -2,7 +2,6 @@
 # Only the main Sass file needs front matter
 ---
 @charset "utf-8";
-
 @import "minimal-mistakes/skins/contrast";
 @import "minimal-mistakes";
 
@@ -34,23 +33,48 @@ html {
   transform: none !important;
 }
 
-/* Force no hover effects */
+/* Disable ALL hover effects on avatar */
+.author__avatar,
+.author__avatar *,
+.sidebar .author__avatar,
+.sidebar .author__avatar *,
+.author__content .author__avatar,
+.author__content .author__avatar * {
+  pointer-events: none !important;
+  cursor: default !important;
+}
+
+/* Re-enable pointer events for parent containers if needed */
+.sidebar,
+.author__content {
+  pointer-events: auto !important;
+}
+
+/* Force static appearance on all states */
+.author__avatar img,
+.author__avatar a img,
+.sidebar .author__avatar img,
+.sidebar .author__avatar a img,
 .sidebar .author__avatar:hover img,
 .sidebar .author__avatar img:hover,
 .author__content .author__avatar:hover img,
-.author__content .author__avatar img:hover {
+.author__content .author__avatar img:hover,
+.author__avatar:hover img,
+.author__avatar img:hover {
   opacity: 1 !important;
   filter: none !important;
   -webkit-filter: none !important;
   transform: none !important;
   box-shadow: none !important;
   border: 2px solid #e0e0e0 !important;
+  transition: none !important;
 }
 
-/* Disable link behavior */
+/* Remove link styling */
 .author__avatar a {
-  pointer-events: none !important;
-  cursor: default !important;
+  text-decoration: none !important;
+  border: none !important;
+  outline: none !important;
 }
 
 @media (min-width: 1024px) {
