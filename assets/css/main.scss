@@ -12,10 +12,11 @@ html {
   font-size: 70% !important; /* 16px -> ~11.2px base */
 }
 
-/* 2) Sidebar headshot: rectangular and larger */
+/* 2) Sidebar headshot: rectangular, 30% larger, with light border */
 .author__avatar {
-  width: 220px !important;          /* default width */
+  width: 286px !important;          /* 30% larger than 220px */
   margin: 0 auto 1rem !important;   /* center */
+  display: table !important;        /* ensure proper containment */
 }
 
 .author__avatar img {
@@ -23,28 +24,61 @@ html {
   width: 100%;
   height: auto;                      /* preserve aspect ratio */
   border-radius: 0 !important;       /* rectangular */
-  box-shadow: none;
-  border: 0;
+  box-shadow: none !important;
+  border: 2px solid #e0e0e0 !important;  /* light gray border */
   opacity: 1 !important;             /* full opacity */
   filter: none !important;           /* no filters */
   transition: none !important;       /* disable transitions */
 }
 
-/* Prevent hover effects on the avatar */
+/* Prevent hover effects on the avatar - more aggressive overrides */
+.author__avatar:hover,
 .author__avatar:hover img,
-.author__avatar img:hover {
+.author__avatar img:hover,
+a.author__avatar:hover img,
+.author__avatar a:hover img {
   opacity: 1 !important;             /* maintain full opacity on hover */
   filter: none !important;           /* no filter changes on hover */
   transform: none !important;        /* no transform on hover */
   box-shadow: none !important;       /* no shadow on hover */
+  border: 2px solid #e0e0e0 !important;  /* maintain border on hover */
 }
 
 /* Remove any link styling if the avatar is wrapped in a link */
-.author__avatar a {
+.author__avatar a,
+a.author__avatar {
   pointer-events: none !important;   /* make non-clickable */
   cursor: default !important;        /* default cursor instead of pointer */
+  text-decoration: none !important;  /* no underline */
+}
+
+/* Disable grayscale filter that might be applied by the theme */
+.sidebar .author__avatar img {
+  filter: none !important;
+  -webkit-filter: none !important;
 }
 
 @media (min-width: 1200px) {
-  .author__avatar { width: 280px !important; }
+  .author__avatar { width: 364px !important; }  /* 30% larger than 280px */
+}
+
+/* 3) Change red buttons to green */
+.btn--danger,
+.btn--primary,
+a.btn--danger,
+a.btn--primary,
+[href*="Read more"] {
+  background-color: #27ae60 !important;  /* Green color */
+  color: #fff !important;
+  border: none !important;
+}
+
+/* Hover state for green buttons */
+.btn--danger:hover,
+.btn--primary:hover,
+a.btn--danger:hover,
+a.btn--primary:hover,
+[href*="Read more"]:hover {
+  background-color: #229954 !important;  /* Darker green on hover */
+  color: #fff !important;
 }
