@@ -1,4 +1,47 @@
+title: Home Page
+description: Multimodal intelligent systems · human-in-the-loop autonomy · speech/vision/3D reasoning · social & assistive robotics
+url: https://omargarib02.github.io
+lang: en
+remote_theme: "mmistakes/minimal-mistakes@4.26.2"
+minimal_mistakes_skin: "contrast"
+plugins:
+  - jekyll-include-cache
+  - jekyll-seo-tag
+  - jekyll-sitemap
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  hard_wrap: false
+
+# ---------- Sidebar / author (left column) ----------
+author:
+  name: Omar Garib
+  avatar: /assets/img/headshot.jpg
+  bio: false
+  links:
+    - label: CV
+      icon: far fa-file-alt
+      url: /assets/cv/Omar_Garib_CV.pdf
+    - label: GitHub
+      icon: fab fa-github
+      url: https://github.com/omargarib02
+    - label: LinkedIn
+      icon: fab fa-linkedin
+      url: https://www.linkedin.com/in/omargarib/
+    - label: Email
+      icon: fas fa-envelope
+      url: mailto:ogarib@gatech.edu
+
+# ---------- Defaults ----------
 defaults:
+  - scope:
+      path: ""
+    values:
+      layout: single
+      toc: false
+      author_profile: false
+      comments: false
   - scope:
       path: ""
       type: pages
@@ -25,3 +68,5 @@ defaults:
               <li style="margin: .6rem 0;"><strong>August 2025</strong> — Two <strong>AIAA SciTech</strong> abstracts accepted.</li>
               <li style="margin: .6rem 0;"><strong>May 2025</strong> — Began research collaboration with <strong>NASA Langley</strong> (Digital Transformation).</li>
             </ul>
+
+timezone: America/New_York
