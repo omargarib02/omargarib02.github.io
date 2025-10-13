@@ -12,9 +12,9 @@ html {
   font-size: 70% !important;
 }
 
-/* 2) Sidebar headshot: rectangular, 60% larger, no border */
+/* 2) Sidebar headshot: rectangular, 90% larger, no border */
 .author__avatar {
-  width: 372px !important;
+  width: 418px !important;
   margin: 0 auto 1rem !important;
   display: table !important;
 }
@@ -22,7 +22,7 @@ html {
 /* For custom sidebar images */
 .sidebar__right .sidebar__item img,
 .sidebar .sidebar__item img {
-  width: 372px !important;
+  width: 418px !important;
   height: auto !important;
   border: none !important;
   border-radius: 0 !important;
@@ -93,11 +93,11 @@ html {
 
 @media (min-width: 1024px) {
   .author__avatar { 
-    width: 473px !important;
+    width: 532px !important;
   }
   .sidebar__right .sidebar__item img,
   .sidebar .sidebar__item img {
-    width: 473px !important;
+    width: 532px !important;
   }
 }
 
