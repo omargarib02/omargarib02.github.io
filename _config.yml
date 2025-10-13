@@ -1,58 +1,22 @@
-title: Home Page
-description: Multimodal intelligent systems · human-in-the-loop autonomy · speech/vision/3D reasoning · social & assistive robotics
-url: https://omargarib02.github.io
-lang: en
-
-remote_theme: "mmistakes/minimal-mistakes@4.26.2"
-minimal_mistakes_skin: "contrast"
-
-plugins:
-  - jekyll-include-cache
-  - jekyll-seo-tag
-  - jekyll-sitemap
-
-markdown: kramdown
-highlighter: rouge
-kramdown:
-  input: GFM
-  hard_wrap: false
-
-# ---------- Sidebar / author (left column) ----------
-author:
-  name: Omar Garib
-  avatar: /assets/img/headshot.jpg
-  bio: false
-  links:
-    - label: CV
-      icon: far fa-file-alt
-      url: /assets/cv/Omar_Garib_CV.pdf
-    - label: GitHub
-      icon: fab fa-github
-      url: https://github.com/omargarib02
-    - label: LinkedIn
-      icon: fab fa-linkedin
-      url: https://www.linkedin.com/in/omargarib/
-    - label: Email
-      icon: fas fa-envelope
-      url: mailto:ogarib@gatech.edu
-
-# ---------- Defaults ----------
 defaults:
-  - scope:
-      path: ""
-    values:
-      layout: single
-      toc: false
-      author_profile: false
-      comments: false
-
-  # Enable author sidebar + News for all pages
   - scope:
       path: ""
       type: pages
     values:
-      author_profile: true
+      author_profile: false
       sidebar:
+        - image: /assets/img/headshot.jpg
+          image_alt: "Omar Garib"
+        - title: "Omar Garib"
+          text: |
+            <div class="author__urls-wrapper">
+              <ul class="author__urls social-icons" style="list-style: none; padding: 0; margin: 0;">
+                <li><a href="/assets/cv/Omar_Garib_CV.pdf"><i class="far fa-file-alt" aria-hidden="true"></i> CV</a></li>
+                <li><a href="https://github.com/omargarib02"><i class="fab fa-github" aria-hidden="true"></i> GitHub</a></li>
+                <li><a href="https://www.linkedin.com/in/omargarib/"><i class="fab fa-linkedin" aria-hidden="true"></i> LinkedIn</a></li>
+                <li><a href="mailto:ogarib@gatech.edu"><i class="fas fa-envelope" aria-hidden="true"></i> Email</a></li>
+              </ul>
+            </div>
         - title: "News"
           text: |
             <ul style="list-style: none; padding: 0; margin: 0;">
@@ -61,5 +25,3 @@ defaults:
               <li style="margin: .6rem 0;"><strong>August 2025</strong> — Two <strong>AIAA SciTech</strong> abstracts accepted.</li>
               <li style="margin: .6rem 0;"><strong>May 2025</strong> — Began research collaboration with <strong>NASA Langley</strong> (Digital Transformation).</li>
             </ul>
-
-timezone: America/New_York
