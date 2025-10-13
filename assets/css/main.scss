@@ -7,25 +7,27 @@
 
 /* ---------- Custom overrides ---------- */
 
-/* Make the sidebar headshot rectangular and larger */
+/* 1) Global type scale (~30% smaller).
+   This affects all rem/em-based text across the site (content, nav, sidebar). */
+html {
+  font-size: 70% !important; /* 16px -> ~11.2px base */
+}
+
+/* 2) Sidebar headshot: rectangular and larger */
 .author__avatar {
-  /* default size on phones/tablets */
-  width: 220px !important;
-  margin: 0 auto 1rem !important; /* center it */
+  width: 220px !important;          /* default width */
+  margin: 0 auto 1rem !important;   /* center */
 }
 
 .author__avatar img {
   display: block;
   width: 100%;
-  height: auto;          /* keep your photo's aspect ratio */
-  border-radius: 0 !important;  /* rectangular (no circle) */
-  box-shadow: none;      /* optional: remove any shadow */
+  height: auto;                      /* preserve aspect ratio */
+  border-radius: 0 !important;       /* rectangular */
+  box-shadow: none;
   border: 0;
 }
 
-/* Bump it bigger on wide screens */
 @media (min-width: 1200px) {
-  .author__avatar {
-    width: 280px !important;
-  }
+  .author__avatar { width: 280px !important; }
 }
