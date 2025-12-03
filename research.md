@@ -30,21 +30,4 @@ A **multimodal, ontology‑guided metadata** pipeline for engineering reports: O
 ---
 
 ## Right‑Moment AI Companion for Older Adults (Work‑In‑Progress)  {#ai-companion}
-**Goal.** Support older adults living alone with a **calm, personalized AI companion** that **intervenes only at the right moments**—helpful, not intrusive.
-
-**Part 1 — Human study / survey.**  
-Design and field a targeted survey and semi‑structured interviews to capture:
-- **Daily routines & interruption tolerance:** times/contexts when an interruption is welcome vs. stressful.  
-- **Situational‑awareness signals:** calendar events, medication windows, cooking/door events, incoming calls, TV/music, sleep.  
-- **Relationship & trust:** tone preferences, escalation thresholds (when to call family/911), privacy boundaries.  
-- **Well‑being markers:** loneliness, mobility constraints, cognitive load/frustration signals, preferred activities.  
-- **Personalization hooks:** names/pronouns/roles, interests, cultural preferences, speech rate/noise tolerance, device affordances.
-
-**Part 2 — System prototype.**  
-- **Event‑driven state machine** with **right‑moment triggering** (temporal windows, activity inference, user‑defined quiet hours).  
-- **Multimodal sensing** (speech, lightweight vision where appropriate, device/context signals).  
-- **LLM‑based dialog** with **memory & preference profiles**; privacy‑first local/edge options where feasible.  
-- **Safety & escalation:** medication reminders, check‑ins, fall‑like anomaly signal integration; respectful escalation plans.  
-- **Evaluation:** perceived helpfulness vs. annoyance, interruption precision/recall, adoption/retention, caregiver satisfaction.
-
-**Status:** protocol design & IRB scoping; early prototype of right‑moment policy under development.
+**Goal.** Support older adults living alone with a **personalized AI companion** that **intervenes only at the right moments**—helpful, not intrusive.
