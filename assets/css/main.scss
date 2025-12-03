@@ -6,7 +6,7 @@
 @import "minimal-mistakes";
 
 /* ==========================================================================
-   FORCE UPDATE TAG: VERSION_V3_FINAL_FIX_SIDEBAR
+   FORCE UPDATE TAG: VERSION_V4_FINAL_HEADSHOT_ZOOM_ONLY
    ========================================================================== */
 
 html {
@@ -20,7 +20,7 @@ html {
 .sidebar {
   opacity: 1 !important;
   transition: none !important;
-  /* Keep the width fix */
+  /* Kept at 280px to preserve page layout */
   width: 280px !important; 
   max-width: 280px !important;
 }
@@ -30,10 +30,13 @@ html {
    ========================================================================== */
 
 .author__avatar {
-  /* Size - Set to 100% to fill the column, or 85% for slightly smaller */
-  width: 100% !important; 
-  max-width: 100% !important;
-  margin: 0 auto 1em !important;
+  /* ZOOM FIX: Set to 150% (1.5x size) */
+  width: 150% !important; 
+  max-width: 150% !important;
+  
+  /* CENTER FIX: Move left by 25% to center the 150% wide image */
+  margin: 0 0 1em -25% !important;
+  
   display: block !important;
   
   /* Kill the Circle */
