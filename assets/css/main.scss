@@ -1,144 +1,67 @@
-
+---
+# Only the main Sass file needs front matter
 ---
 @charset "utf-8";
 @import "minimal-mistakes/skins/contrast";
 @import "minimal-mistakes";
 
-/* ---------- Custom overrides ---------- */
+/* ==========================================================================
+   FORCE UPDATE TAG: VERSION_SQUARE_HEADSHOT
+   (If you don't see this tag in your browser "View Source", the old file is still cached)
+   ========================================================================== */
 
-/* 1) Global type scale (~30% smaller) */
+/* 1. Global text adjustment */
 html {
   font-size: 70% !important;
 }
 
-/* --------------------------------------------------------- */
-/* 2) SIDEBAR HEADSHOT FIXES (Color & Size)                  */
-/* --------------------------------------------------------- */
-
-/* Container: Ensure it fills the sidebar column width */
-.author__avatar {
-  width: 100% !important;
-  margin: 0 auto 1rem !important;
-  display: block !important;
-}
-
-/* Image: Full color, no filters, fill container, rectangular */
+/* 2. FORCE RECTANGULAR & FULL COLOR AVATAR */
+.author__avatar,
+.author__avatar a,
 .author__avatar img {
-  display: block !important;
-  width: 100% !important;      /* Fills the sidebar width completely */
-  height: auto !important;     /* Maintains aspect ratio */
+  /* Force Square Corners */
+  border-radius: 0 !important;
   
-  /* SHAPE */
-  border-radius: 0 !important; /* Square corners */
-  border: none !important;
-  box-shadow: none !important;
+  /* Force Full Width */
+  width: 100% !important;
+  max-width: 100% !important;
+  height: auto !important;
 
-  /* COLOR CORRECTION (Fixes "colored-down" look) */
-  opacity: 1 !important;
+  /* Force Full Color (Override "Contrast" skin) */
   filter: none !important;
   -webkit-filter: none !important;
-  mix-blend-mode: normal !important; /* Crucial: stops the skin from blending the image */
-}
-
-/* Sidebar images (if any others exist) */
-.sidebar__right .sidebar__item img,
-.sidebar .sidebar__item img {
-  width: 100% !important;
-  height: auto !important;
-  border: none !important;
-  border-radius: 0 !important;
-  box-shadow: none !important;
-  display: block !important;
-  margin: 0 auto 1rem !important;
-  
-  /* Ensure these are also full color */
-  filter: none !important;
   mix-blend-mode: normal !important;
+  opacity: 1 !important;
+  
+  /* Remove Borders/Shadows */
+  border: none !important;
+  box-shadow: none !important;
 }
 
-/* --------------------------------------------------------- */
-/* 3) DISABLE HOVER / INTERACTION ON HEADSHOT                */
-/* --------------------------------------------------------- */
+/* 3. WIDEN THE SIDEBAR (To make the image physically bigger) */
+/* The default sidebar is narrow. This forces it wider on desktop. */
+@media (min-width: 1024px) {
+  .sidebar {
+    width: 300px !important; /* Makes the column wider */
+    max-width: 300px !important;
+  }
+}
 
-/* Disable pointer events so it acts like a static image */
-.author__avatar,
-.author__avatar *,
-.sidebar .author__avatar,
-.author__content .author__avatar {
+/* 4. DISABLE HOVER EFFECTS */
+.author__avatar {
   pointer-events: none !important;
   cursor: default !important;
 }
 
-/* Re-enable pointer events for the rest of the sidebar/content */
-.sidebar,
-.author__content {
-  pointer-events: auto !important;
-}
-
-/* Force static appearance (ensure no hover effects trigger) */
-.author__avatar img,
-.author__avatar:hover img,
-.author__avatar img:hover {
-  opacity: 1 !important;
-  filter: none !important;
-  -webkit-filter: none !important;
-  transform: none !important;
-  box-shadow: none !important;
-  transition: none !important;
-}
-
-/* Remove link styling if the image is wrapped in a link */
-.author__avatar a {
-  text-decoration: none !important;
-  border: none !important;
-  outline: none !important;
-}
-
-
-/* --------------------------------------------------------- */
-/* 4) BUTTONS (Green)                                        */
-/* --------------------------------------------------------- */
-
-.archive__item .btn,
-.archive__item-excerpt + p a,
-a.btn--danger,
-a.btn--primary,
+/* 5. GREEN BUTTONS */
 .btn--danger,
-.btn--primary {
+.btn--primary,
+.archive__item .btn {
   background-color: #27ae60 !important;
-  color: #fff !important;
   border-color: #27ae60 !important;
 }
 
-.archive__item .btn:hover,
-.archive__item-excerpt + p a:hover,
-a.btn--danger:hover,
-a.btn--primary:hover,
-.btn--danger:hover,
-.btn--primary:hover {
-  background-color: #229954 !important;
-  color: #fff !important;
-  border-color: #229954 !important;
-}
-
-/* Target "Read more" links specifically */
-a[href*="Read more"],
-.archive__item a[href*="Read more"] {
-  background-color: #27ae60 !important;
-  color: #fff !important;
-}
-
-a[href*="Read more"]:hover,
-.archive__item a[href*="Read more"]:hover {
-  background-color: #229954 !important;
-  color: #fff !important;
-}
-
-/* --------------------------------------------------------- */
-/* 5) HIDE FOOTER ELEMENTS                                   */
-/* --------------------------------------------------------- */
-
-.back-to-top,
+/* 6. HIDE FOOTER */
 .page__footer-follow {
   display: none !important;
 }
