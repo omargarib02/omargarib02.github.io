@@ -7,7 +7,7 @@ permalink: /research/
 ## Human‑in‑the‑Loop Multimodal Aviation Testbed  {#aviation-testbed}
 A modular **Godot + FastAPI** simulation environment with plug‑and‑play components for **automatic speech recognition (ASR)**, **vision**, **decision**, and **text‑to‑speech (TTS)** over REST/JSON. Supports **pilot/****air traffic control**‑in‑the‑loop trials and a scripted scenario suite (terminal & en‑route conflicts) for reproducible evaluation of intelligent‑system architectures.
 
-**Status:** Major robotics/ML conference (double‑anonymous review) — *in submission*.  
+**Status:** *in submission*.  
 **Preprint:** [PDF](assets/papers/aviation_testbed_preprint.pdf)  
 **Artifacts:** Code (coming soon) · Video (coming soon)
 
