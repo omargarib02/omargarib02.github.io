@@ -6,54 +6,77 @@
 @import "minimal-mistakes";
 
 /* ==========================================================================
-   FORCE UPDATE TAG: VERSION_SQUARE_HEADSHOT
-   (If you don't see this tag in your browser "View Source", the old file is still cached)
+   FORCE UPDATE TAG: VERSION_SQUARE_V2_FIXED_CONTRAST
+   (If you don't see this tag in "View Source", clear cache!)
    ========================================================================== */
 
-/* 1. Global text adjustment */
 html {
   font-size: 70% !important;
 }
 
-/* 2. FORCE RECTANGULAR & FULL COLOR AVATAR */
-.author__avatar,
-.author__avatar a,
-.author__avatar img {
-  /* Force Square Corners */
-  border-radius: 0 !important;
-  
-  /* Force Full Width */
-  width: 100% !important;
-  max-width: 100% !important;
-  height: auto !important;
+/* ==========================================================================
+   HEADSHOT FIXES (Size & Color)
+   ========================================================================== */
 
-  /* Force Full Color (Override "Contrast" skin) */
-  filter: none !important;
-  -webkit-filter: none !important;
-  mix-blend-mode: normal !important;
-  opacity: 1 !important;
-  
-  /* Remove Borders/Shadows */
-  border: none !important;
-  box-shadow: none !important;
+/* 1. Set Container Size & Shape */
+.author__avatar {
+  /* ADJUST SIZE HERE: Change 85% to make it bigger or smaller */
+  width: 85% !important; 
+  max-width: 85% !important;
+  /* Center the container horizontally */
+  margin: 0 auto 1em !important; 
+  display: block !important;
+  /* Force Square container */
+  border-radius: 0 !important; 
 }
 
-/* 3. WIDEN THE SIDEBAR (To make the image physically bigger) */
-/* The default sidebar is narrow. This forces it wider on desktop. */
+/* 2. THE NUCLEAR COLOR FIX */
+/* Target EVERY combination of container, link, and image, in EVERY state (hover or not) */
+.author__avatar,
+.author__avatar:hover,
+.author__avatar:focus,
+.author__avatar a,
+.author__avatar a:hover,
+.author__avatar a:focus,
+.author__avatar img,
+.author__avatar img:hover,
+.author__avatar img:focus {
+   /* Force full opacity (no fading) always */
+   opacity: 1 !important;
+   /* Kill all grayscale/contrast filters */
+   filter: none !important;
+   -webkit-filter: none !important;
+   /* Kill blending modes */
+   mix-blend-mode: normal !important;
+   /* Stop annoying hover zoom/fade animations */
+   transition: none !important;
+   transform: none !important;
+   cursor: default !important; /* Don't show pointer hand */
+}
+
+/* 3. Image fitting details */
+.author__avatar img {
+   width: 100% !important; /* Fill the 85% container */
+   height: auto !important;
+   border-radius: 0 !important; /* Square image */
+   border: none !important;
+   box-shadow: none !important;
+   pointer-events: none !important;
+}
+
+/* ==========================================================================
+   OTHER OVERRIDES
+   ========================================================================== */
+
+/* Widen the sidebar slightly on desktop so the text fits better next to the bigger image */
 @media (min-width: 1024px) {
   .sidebar {
-    width: 300px !important; /* Makes the column wider */
-    max-width: 300px !important;
+    width: 280px !important; 
+    max-width: 280px !important;
   }
 }
 
-/* 4. DISABLE HOVER EFFECTS */
-.author__avatar {
-  pointer-events: none !important;
-  cursor: default !important;
-}
-
-/* 5. GREEN BUTTONS */
+/* Green Buttons */
 .btn--danger,
 .btn--primary,
 .archive__item .btn {
@@ -61,7 +84,7 @@ html {
   border-color: #27ae60 !important;
 }
 
-/* 6. HIDE FOOTER */
+/* Hide Footer */
 .page__footer-follow {
   display: none !important;
 }
