@@ -6,7 +6,7 @@
 @import "minimal-mistakes";
 
 /* ==========================================================================
-   FORCE UPDATE TAG: VERSION_V4_FINAL_HEADSHOT_ZOOM_ONLY
+   FORCE UPDATE TAG: VERSION_V5_FINAL_IMAGE_ZOOM_FIX
    ========================================================================== */
 
 html {
@@ -14,61 +14,66 @@ html {
 }
 
 /* ==========================================================================
-   1. FIX THE SIDEBAR FADING (The "Hover" Issue)
+   1. SIDEBAR CONFIGURATION (Strict Locking)
    ========================================================================== */
-/* The Contrast theme fades the whole sidebar to 75%. We force it to 100%. */
+/* Force the sidebar to be fully opaque and fixed width */
 .sidebar {
   opacity: 1 !important;
   transition: none !important;
-  /* Kept at 280px to preserve page layout */
+  
+  /* STRICT WIDTH LOCK: Prevents layout breaking */
   width: 280px !important; 
   max-width: 280px !important;
+  
+  /* Ensure content doesn't force it wider */
+  min-width: 280px !important; 
 }
 
 /* ==========================================================================
-   2. HEADSHOT FIXES (Square & Clean)
+   2. HEADSHOT ZOOM (The 1.5x Fix)
    ========================================================================== */
 
+/* 2A. The Container: Keep it strictly inside the sidebar */
 .author__avatar {
-  /* ZOOM FIX: Set to 150% (1.5x size) */
-  width: 150% !important; 
-  max-width: 150% !important;
-  
-  /* CENTER FIX: Move left by 25% to center the 150% wide image */
-  margin: 0 0 1em -25% !important;
-  
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 auto 1em !important;
+  padding: 0 !important;
   display: block !important;
   
-  /* Kill the Circle */
-  border-radius: 0 !important; 
+  /* Allow the zoomed image to spill out of this box if needed */
+  overflow: visible !important; 
   
-  /* Ensure no extra fading on the container */
+  /* Visual Resets */
+  border-radius: 0 !important;
   opacity: 1 !important;
-  filter: none !important;
   background: transparent !important;
 }
 
+/* 2B. The Image: Force it to grow BEYOND the container */
 .author__avatar img {
-  /* Shape & Fit */
-  width: 100% !important;
+  /* ZOOM FACTOR: 150% width of the container */
+  width: 150% !important;
+  
+  /* CRITICAL: Override default constraints that keep it small */
+  max-width: none !important; 
+  
+  /* CENTER IT: Shift left by half the growth ((150% - 100%) / 2 = 25%) */
+  margin-left: -25% !important;
+  
+  /* Height scales automatically */
   height: auto !important;
   display: block !important;
   
-  /* Kill the Circle */
+  /* Visual Resets */
   border-radius: 0 !important;
-  
-  /* COLOR FIX: Force full visibility always */
   opacity: 1 !important;
   filter: none !important;
-  -webkit-filter: none !important;
   mix-blend-mode: normal !important;
-  
-  /* Stop animations */
   transition: none !important;
-  transform: none !important;
 }
 
-/* Kill any pseudo-element overlays that might sit on top */
+/* Kill pseudo-elements */
 .author__avatar::after,
 .author__avatar::before {
   display: none !important;
