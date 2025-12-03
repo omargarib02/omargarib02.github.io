@@ -1,5 +1,4 @@
----
-# Only the main Sass file needs front matter
+
 ---
 @charset "utf-8";
 @import "minimal-mistakes/skins/contrast";
@@ -12,96 +11,94 @@ html {
   font-size: 70% !important;
 }
 
-/* 2) Sidebar headshot: rectangular, 200% larger (doubled), no border */
+/* --------------------------------------------------------- */
+/* 2) SIDEBAR HEADSHOT FIXES (Color & Size)                  */
+/* --------------------------------------------------------- */
+
+/* Container: Ensure it fills the sidebar column width */
 .author__avatar {
-  width: 1046px !important;
+  width: 100% !important;
   margin: 0 auto 1rem !important;
-  display: table !important;
-}
-
-/* For custom sidebar images */
-.sidebar__right .sidebar__item img,
-.sidebar .sidebar__item img {
-  width: 1046px !important;
-  height: auto !important;
-  border: none !important;
-  border-radius: 0 !important;
-  box-shadow: none !important;
   display: block !important;
-  margin: 0 auto 1rem !important;
-  pointer-events: none !important;
-  cursor: default !important;
 }
 
+/* Image: Full color, no filters, fill container, rectangular */
 .author__avatar img {
   display: block !important;
-  width: 100% !important;
-  height: auto !important;
-  border-radius: 0 !important;
-  box-shadow: none !important;
+  width: 100% !important;      /* Fills the sidebar width completely */
+  height: auto !important;     /* Maintains aspect ratio */
+  
+  /* SHAPE */
+  border-radius: 0 !important; /* Square corners */
   border: none !important;
+  box-shadow: none !important;
+
+  /* COLOR CORRECTION (Fixes "colored-down" look) */
   opacity: 1 !important;
-  filter: grayscale(0%) contrast(100%) brightness(100%) !important;
-  -webkit-filter: grayscale(0%) contrast(100%) brightness(100%) !important;
-  transition: none !important;
-  transform: none !important;
+  filter: none !important;
+  -webkit-filter: none !important;
+  mix-blend-mode: normal !important; /* Crucial: stops the skin from blending the image */
 }
 
-/* Disable ALL hover effects on avatar */
+/* Sidebar images (if any others exist) */
+.sidebar__right .sidebar__item img,
+.sidebar .sidebar__item img {
+  width: 100% !important;
+  height: auto !important;
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  display: block !important;
+  margin: 0 auto 1rem !important;
+  
+  /* Ensure these are also full color */
+  filter: none !important;
+  mix-blend-mode: normal !important;
+}
+
+/* --------------------------------------------------------- */
+/* 3) DISABLE HOVER / INTERACTION ON HEADSHOT                */
+/* --------------------------------------------------------- */
+
+/* Disable pointer events so it acts like a static image */
 .author__avatar,
 .author__avatar *,
 .sidebar .author__avatar,
-.sidebar .author__avatar *,
-.author__content .author__avatar,
-.author__content .author__avatar * {
+.author__content .author__avatar {
   pointer-events: none !important;
   cursor: default !important;
 }
 
-/* Re-enable pointer events for parent containers if needed */
+/* Re-enable pointer events for the rest of the sidebar/content */
 .sidebar,
 .author__content {
   pointer-events: auto !important;
 }
 
-/* Force static appearance on all states */
+/* Force static appearance (ensure no hover effects trigger) */
 .author__avatar img,
-.author__avatar a img,
-.sidebar .author__avatar img,
-.sidebar .author__avatar a img,
-.sidebar .author__avatar:hover img,
-.sidebar .author__avatar img:hover,
-.author__content .author__avatar:hover img,
-.author__content .author__avatar img:hover,
 .author__avatar:hover img,
 .author__avatar img:hover {
   opacity: 1 !important;
-  filter: grayscale(0%) contrast(100%) brightness(100%) !important;
-  -webkit-filter: grayscale(0%) contrast(100%) brightness(100%) !important;
+  filter: none !important;
+  -webkit-filter: none !important;
   transform: none !important;
   box-shadow: none !important;
-  border: none !important;
   transition: none !important;
 }
 
-/* Remove link styling */
+/* Remove link styling if the image is wrapped in a link */
 .author__avatar a {
   text-decoration: none !important;
   border: none !important;
   outline: none !important;
 }
 
-@media (min-width: 1024px) {
-  .author__avatar { 
-    width: 665px !important;
-  }
-  .sidebar__right .sidebar__item img,
-  .sidebar .sidebar__item img {
-    width: 665px !important;
-  }
-}
 
-/* 3) Change red "Read more" buttons to green */
+/* --------------------------------------------------------- */
+/* 4) BUTTONS (Green)                                        */
+/* --------------------------------------------------------- */
+
 .archive__item .btn,
 .archive__item-excerpt + p a,
 a.btn--danger,
@@ -137,7 +134,10 @@ a[href*="Read more"]:hover,
   color: #fff !important;
 }
 
-/* Hide bottom left arrow/back-to-top button */
+/* --------------------------------------------------------- */
+/* 5) HIDE FOOTER ELEMENTS                                   */
+/* --------------------------------------------------------- */
+
 .back-to-top,
 .page__footer-follow {
   display: none !important;
