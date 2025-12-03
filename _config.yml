@@ -20,9 +20,6 @@ author:
   avatar: /assets/img/headshot.jpg
   bio: false
   links:
-    - label: CV
-      icon: far fa-file-alt
-      url: /assets/cv/Omar_Garib_CV.pdf
     - label: GitHub
       icon: fab fa-github
       url: https://github.com/omargarib02
