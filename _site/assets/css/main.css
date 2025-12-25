@@ -1300,26 +1300,35 @@ body { display: -webkit-box; display: -ms-flexbox; display: flex; min-height: 10
   .page__hero-caption a { color: #000 !important; }
   /* Hide the following elements on print ========================================================================== */
   .masthead, .toc, .page__share, .page__related, .pagination, .ads, .page__footer, .page__comments-form, .author__avatar, .author__content, .author__urls-wrapper, .nav__list, .sidebar, .adsbygoogle { display: none !important; height: 1px !important; } }
-/* ========================================================================== FORCE UPDATE TAG: VERSION_V5_FINAL_IMAGE_ZOOM_FIX ========================================================================== */
-html { font-size: 70% !important; }
+/* ========================================================================== SITE LAYOUT AND TYPOGRAPHY CONFIGURATION ========================================================================== */
+/* 1. GLOBAL TYPOGRAPHY Reset root font size to standard scaling for optimal readability. */
+html { font-size: 100% !important; }
 
-/* ========================================================================== 1. SIDEBAR CONFIGURATION (Strict Locking) ========================================================================== */
-/* Force the sidebar to be fully opaque and fixed width */
-.sidebar { opacity: 1 !important; transition: none !important; /* STRICT WIDTH LOCK: Prevents layout breaking */ width: 280px !important; max-width: 280px !important; /* Ensure content doesn't force it wider */ min-width: 280px !important; }
+/* 2. DESKTOP LAYOUT GRID Define strict column widths to ensure consistent spacing between  the sidebar identity and the main content area. */
+@media (min-width: 64em) { /* Sidebar Column: Fixed width for consistent identity presence */
+  .sidebar { opacity: 1 !important; transition: none !important; width: 300px !important; max-width: 300px !important; min-width: 300px !important; }
+  /* Main Content Column: Calculated width to prevent sidebar overlap. Calculation: 100% Viewport - (300px Sidebar + 50px Gutter). */
+  .page, .archive { width: calc(100% - 350px) !important; float: right !important; padding-right: 0 !important; } }
+/* 3. AUTHOR PROFILE STYLING Enhances visibility of the author name and centers bio elements. */
+.sidebar .author__content { text-align: center !important; }
 
-/* ========================================================================== 2. HEADSHOT ZOOM (The 1.5x Fix) ========================================================================== */
-/* 2A. The Container: Keep it strictly inside the sidebar */
-.author__avatar { width: 100% !important; max-width: 100% !important; margin: 0 auto 1em !important; padding: 0 !important; display: block !important; /* Allow the zoomed image to spill out of this box if needed */ overflow: visible !important; /* Visual Resets */ border-radius: 0 !important; opacity: 1 !important; background: transparent !important; }
+.sidebar .author__name { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; font-size: 2.0rem !important; font-weight: 900 !important; letter-spacing: -0.5px; margin-top: 15px !important; margin-bottom: 10px !important; line-height: 1.1 !important; color: #000 !important; }
 
-/* 2B. The Image: Force it to grow BEYOND the container */
-.author__avatar img { /* ZOOM FACTOR: 150% width of the container */ width: 150% !important; /* CRITICAL: Override default constraints that keep it small */ max-width: none !important; /* CENTER IT: Shift left by half the growth ((150% - 100%) / 2 = 25%) */ margin-left: -25% !important; /* Height scales automatically */ height: auto !important; display: block !important; /* Visual Resets */ border-radius: 0 !important; opacity: 1 !important; filter: none !important; mix-blend-mode: normal !important; transition: none !important; }
+.sidebar .author__bio { text-align: center !important; margin-top: 5px !important; font-size: 0.95rem !important; }
 
-/* Kill pseudo-elements */
-.author__avatar::after, .author__avatar::before { display: none !important; }
+.sidebar .author__urls-wrapper { text-align: center !important; }
 
-/* ========================================================================== 3. OTHER OVERRIDES ========================================================================== */
-/* Green Buttons */
-.btn--danger, .btn--primary, .archive__item .btn { background-color: #27ae60 !important; border-color: #27ae60 !important; }
+.sidebar .author__urls-wrapper button { margin: 0 auto !important; }
 
-/* Hide Footer */
+/* 4. AVATAR IMAGE Full-width responsive image within the sidebar container. */
+.sidebar .author__avatar { width: 100% !important; margin: 0 0 25px 0 !important; padding: 0 !important; }
+
+.sidebar .author__avatar img { width: 100% !important; max-width: 100% !important; height: auto !important; border-radius: 0 !important; border: none !important; box-shadow: none !important; }
+
+/* 5. UI COMPONENTS Standardize button colors to site theme. */
+.btn--danger, .btn--primary, .archive__item .btn { background-color: #27ae60 !important; border-color: #27ae60 !important; color: #fff !important; }
+
+.btn--danger:hover, .btn--primary:hover, .archive__item .btn:hover { background-color: #219150 !important; border-color: #219150 !important; }
+
+/* 6. UTILITIES */
 .page__footer-follow { display: none !important; }

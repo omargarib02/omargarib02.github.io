@@ -1,33 +1,48 @@
 ---
-layout: single
-title: Research
+title: "Research"
 permalink: /research/
+layout: single
+author_profile: true
 ---
 
-## Human‑in‑the‑Loop Multimodal Aviation Testbed  {#aviation-testbed}
-A modular **Godot + FastAPI** simulation environment with plug‑and‑play components for **automatic speech recognition (ASR)**, **vision**, **decision**, and **text‑to‑speech (TTS)** over REST/JSON. Supports **pilot/****air traffic control**‑in‑the‑loop trials and a scripted scenario suite (terminal & en‑route conflicts) for reproducible evaluation of intelligent‑system architectures.
+My work focuses on reliable embodied AI for safety-critical autonomy, especially human-in-the-loop settings where the system must reason under uncertainty and coordinate with people.
 
-**Status:** *in submission*.  
-**Preprint:** [PDF](https://www.arxiv.org/abs/2511.18718)  
-**Artifacts:** Code (coming soon) · Video (coming soon)
+## AIRHILT
 
----
+A modular Godot + FastAPI simulation environment that synchronizes stochastic pilot speech, vision streams, and ADS-B telemetry to model information asymmetry in pilot and air traffic control interactions.
 
-## SimuGAN–Whisper–ATC  {#simugan-whisper-atc}
-**AIAA SciTech — accepted abstract**  
-We introduce a **generative adversarial network (GAN)**‑based radio‑noise injection pipeline that learns realistic **very‑high‑frequency (VHF)** artifacts from **ATCO2** and **TartanAviation** and injects them into clean **ATCOSIM** utterances. Fine‑tuning Whisper on the enriched dataset reduces **word‑error‑rate (WER)** on real **air traffic control** speech from **14.66% → 3.58%** (≈**75.6%** relative reduction), moving toward deployable ASR for safety‑critical **air traffic control** workflows.
+- **Architecture:** Architected a modular simulation environment (Godot/FastAPI) that synchronizes stochastic pilot speech, vision streams, and ADS-B telemetry for human-in-the-loop evaluation.
+- **Decision logic:** Designed a confidence-gated decision logic that fuses uncertain perception, including a probabilistic evidence score that weights conflicting sensor inputs and triggers clarification requests under high uncertainty.
+- **Validation:** Engineered a verification protocol using 6 conflict families (e.g., runway overlaps) and quantified how ASR and vision latency propagate into pilot warning time, achieving about a 7.7 s lead-time baseline for safe human-AI handover.
 
-- [Abstract PDF](assets/papers/simugan_whisper_atc.pdf) · Code (coming soon)
+**Status:** Under review.  
+**Preprint:** [arXiv](https://arxiv.org/abs/2511.18718) | [PDF](https://arxiv.org/pdf/2511.18718)
 
----
+* * *
 
-## Multimodal Metadata Tagging for Engineering Simulation Repositories  {#metadata-extraction}
-**AIAA SciTech — accepted abstract**  
-A **multimodal, ontology‑guided metadata** pipeline for engineering reports: OCR + **vision‑language model (VLM)** captions + text chunks → vector DB → **retrieval‑augmented generation (RAG)** with an LLM to produce structured JSON metadata aligned with an engineering ontology. Initial results show **high recall** across categories and a working **faceted search** demonstrator.
+## VHF-Sim2Real
 
-- [Abstract PDF](assets/papers/multimodal_extraction.pdf) · Code (coming soon)
+**AIAA SciTech Forum 2026, accepted.**
 
----
+We develop an unpaired spectrogram-translation GAN to bridge the sim-to-real gap by adapting synthetic clear speech to match the texture of operational very high frequency (VHF) radio interference without paired data. Fine-tuning Whisper on the GAN-augmented dataset reduces word error rate (WER) on out-of-distribution real-world air traffic data by 75.0% (14.3% to 3.6%).
 
-## Right‑Moment AI Companion for Older Adults (Work‑In‑Progress)  {#ai-companion}
-**Goal.** Support older adults living alone with a **personalized AI companion** that **intervenes only at the right moments**—helpful, not intrusive.
+**Paper:** [PDF](/assets/papers/simugan_whisper_atc.pdf)
+
+* * *
+
+## Multimodal Metadata Tagging
+
+**AIAA SciTech Forum 2026, accepted.**
+
+Co-first author of a framework that fuses OCR, vision-language embeddings, and LLM-driven reasoning to autonomously recover semantic structure from unstructured engineering reports. The pipeline combines OCR text and vision-language captions with retrieval-augmented generation to produce structured JSON metadata aligned with an engineering ontology. Designed synthetic text-and-figure datasets and a multi-label benchmarking protocol to evaluate tag precision, recall, and F1 across engineering metadata categories.
+
+**Paper:** [PDF](/assets/papers/multimodal_extraction.pdf)
+
+* * *
+
+## Preference-Aware Shared Autonomy for Assistive AI
+
+**Work in progress.**
+
+- Leading a user study with 150 older adults to model user preferences and reluctance toward AI assistance (Collaboration with Albert Einstein College of Medicine).
+- Developing partially observable decision policies that balance safety interventions with user autonomy and daily routines, using learned preference and reluctance models to decide when to act versus when to defer.

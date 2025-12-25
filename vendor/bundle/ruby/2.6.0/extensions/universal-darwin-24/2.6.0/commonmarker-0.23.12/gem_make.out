@@ -1,5 +1,5 @@
 current directory: /Users/ogarib/Desktop/Personal_Website/omargarib02.github.io/vendor/bundle/ruby/2.6.0/gems/commonmarker-0.23.12/ext/commonmarker
-/System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/bin/ruby -I /System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/lib/ruby/2.6.0 -r ./siteconf20251225-7522-15y5yb8.rb extconf.rb
+/System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/bin/ruby -I /System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/lib/ruby/2.6.0 -r ./siteconf20251225-12895-1c683wf.rb extconf.rb
 checking for whether -std=c99 is accepted as CFLAGS... yes
 creating Makefile
 
@@ -1728,4 +1728,4 @@ ld: warning: search path '/AppleInternal/Library/BuildRoots/4~B5FAugAunRW9OK7YcF
 
 current directory: /Users/ogarib/Desktop/Personal_Website/omargarib02.github.io/vendor/bundle/ruby/2.6.0/gems/commonmarker-0.23.12/ext/commonmarker
 make "DESTDIR=" install
-/usr/bin/install -c -m 0755 commonmarker.bundle ./.gem.20251225-7522-vbhxd0/commonmarker
+/usr/bin/install -c -m 0755 commonmarker.bundle ./.gem.20251225-12895-jk9sda/commonmarker

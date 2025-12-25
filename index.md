@@ -1,48 +1,58 @@
 ---
 layout: single
-title: ""
+title: "About"
 author_profile: true
-classes: wide
 
-# Featured research cards (Aviation testbed → SimuGAN → Metadata)
+# Featured research cards
 research_cards:
   - image_path: /assets/img/research/airhilt_scenarios.png
-    alt: "Aviation testbed scenario montage"
-    title: "Human‑in‑the‑Loop Aviation Testbed"
-    excerpt: "Open simulation for pilot/air traffic control‑in‑the‑loop evaluation."
-    url: /research/#aviation-testbed
+    alt: "AIRHILT aviation testbed scenarios"
+    title: "AIRHILT Aviation Testbed"
+    excerpt: "Multimodal pilot/ATC simulation for human-in-the-loop conflict detection and safe handover."
+    url: /research/#airhilt
     btn_label: "Read more"
     btn_class: "btn--primary"
 
   - image_path: /assets/img/research/simugan_spectrogram.png
-    alt: "Spectrogram comparison (SimuGAN‑Whisper‑ATC)"
-    title: "SimuGAN‑Whisper‑ATC"
-    excerpt: "GAN‑based noise modeling for ATC audio; robust Whisper fine‑tuning."
-    url: /research/#simugan-whisper-atc
+    alt: "VHF-Sim2Real spectrogram comparison"
+    title: "VHF-Sim2Real"
+    excerpt: "GAN-based sim-to-real noise modeling for ATC ASR (WER 14.3% → 3.6% on real ATC audio)."
+    url: /research/#vhf-sim2real
     btn_label: "Read more"
     btn_class: "btn--primary"
 
   - image_path: /assets/img/research/metadata_pipeline.png
-    alt: "Multimodal metadata pipeline"
-    title: "Multimodal metadata tagging"
-    excerpt: "OCR + VLM + RAG to structure engineering knowledge."
-    url: /research/#metadata-extraction
+    alt: "Multimodal metadata tagging pipeline"
+    title: "Multimodal Metadata Tagging"
+    excerpt: "VLM + RAG to recover structured metadata from engineering reports."
+    url: /research/#multimodal-metadata-tagging
     btn_label: "Read more"
     btn_class: "btn--primary"
 ---
 
-## About
+Hi, I'm **Omar**. I am a **Graduate Researcher** in Computational Science & Engineering at **Georgia Tech**, working with the Aerospace Systems Design Lab (ASDL).
 
-**I'm an MS student in Computational Science & Engineering at Georgia Tech** (Aerospace Systems Design Lab, ASDL).
+My goal is to build **reliable embodied AI** for **safety-critical autonomy**, especially in settings where people stay in the loop and the system must communicate uncertainty clearly.
 
-I build **multimodal, human‑in‑the‑loop intelligent systems** for safety‑critical autonomy, combining **speech**, **vision**, and **3D spatial reasoning**, and I also develop **automated document/knowledge‑extraction pipelines**.
+Recently, I’ve been building a human-in-the-loop aviation testbed (AIRHILT), developing sim-to-real methods for robust air-traffic-control speech recognition (VHF-Sim2Real), and working on multimodal information extraction and preference-aware assistive AI.
 
-My research interests center on human–AI/robot collaboration, social and assistive robotics, and building mutlimodal intelligent systems that integrate vision, speech, and spatial reasoning in safety-critical environments.
+**Personal:** When I'm not debugging simulation pipelines or reading papers, I enjoy playing **soccer** and competing in **FIFA** on PlayStation.
 
-## Highlights
-- **Human‑in‑the‑Loop Aviation Testbed** — an open simulation testbed for **multimodal AI copilots in aviation**. Models for ASR/vision/decision/TTS plug in via lightweight adapters, making it easy to swap architectures and **run hundreds of scripted terminal/en‑route scenarios** to measure assistant performance and ablations.
-- **SimuGAN‑Whisper‑ATC** — a **GAN‑based noise‑modeling pipeline** that captures air‑traffic‑control radio artifacts and **injects them during Whisper fine‑tuning**, yielding a **WER drop from 14.66 → 3.58** on real ATC audio.
-- **LLM/RAG document extraction** — multimodal mining of engineering **artifacts** for **metadata & discovery**.
+## Research Interests
 
-## Featured research
+I work on **reliable embodied AI** for **safety-critical autonomy**, with an emphasis on systems that collaborate with people. I’m especially interested in:
+
+*   **Decision-making under uncertainty:** Using POMDP-style formulations and **formal safety** so an assistant acts conservatively when perception is noisy.
+*   **Human-Robot Interaction (HRI):** **Representation alignment** and preference-aware assistance, knowing when to act, ask, or defer.
+*   **Vision-Language-Action (VLA):** Grounding language in perception and control for **shared autonomy**.
+
+## News
+
+*   **Feb 2026:** Incoming Visiting Researcher at **MBZUAI** (Robotics Cognition and Learning Group).
+*   **Nov 2025:** AIRHILT preprint posted on arXiv; paper under review. [PDF](https://arxiv.org/pdf/2511.18718)
+*   **Oct 2025:** Started a Human-AI Interaction collaboration with **Albert Einstein College of Medicine** (150-participant study).
+*   **Aug 2025:** Two papers accepted at **AIAA SciTech Forum 2026**.
+*   **May 2025:** Began research collaboration with **NASA Langley** (Digital Transformation Initiative).
+
+## Featured Research
 {% include feature_row id="research_cards" %}

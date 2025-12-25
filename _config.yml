@@ -1,5 +1,5 @@
-title: Home Page
-description: Multimodal intelligent systems · human-in-the-loop autonomy · speech/vision/3D reasoning · social & assistive robotics
+title: Omar Garib
+description: Reliable Embodied AI · Safety-Critical Autonomy · Vision-Language-Action · Human-Robot Interaction
 url: https://omargarib02.github.io
 lang: en
 remote_theme: "mmistakes/minimal-mistakes@4.26.2"
@@ -14,11 +14,11 @@ kramdown:
   input: GFM
   hard_wrap: false
 
-# ---------- Sidebar / author (left column) ----------
+# ---------- Sidebar Settings ----------
 author:
   name: Omar Garib
   avatar: /assets/img/headshot.jpg
-  bio: false
+  bio: "Graduate Researcher in Computational Science & Engineering at Georgia Tech (ASDL)."
   links:
     - label: GitHub
       icon: fab fa-github
@@ -30,28 +30,20 @@ author:
       icon: fas fa-envelope
       url: mailto:ogarib@gatech.edu
 
-# ---------- Defaults ----------
+# ---------- Layout Defaults ----------
 defaults:
   - scope:
       path: ""
     values:
       layout: single
       toc: false
-      author_profile: false
+      author_profile: true
       comments: false
+
   - scope:
       path: ""
       type: pages
     values:
       author_profile: true
-      sidebar:
-        - title: "News"
-          text: |
-            <ul style="list-style: none; padding: 0; margin: 0;">
-              <li style="margin: .6rem 0;"><strong>September 2025</strong> — Began research effort on designing a personalized AI companion for the elderly.</li>
-              <li style="margin: .6rem 0;"><strong>September 2025</strong> — AIRHILT preprint released.</li>
-              <li style="margin: .6rem 0;"><strong>August 2025</strong> — Two <strong>AIAA SciTech</strong> abstracts accepted.</li>
-              <li style="margin: .6rem 0;"><strong>May 2025</strong> — Began research collaboration with <strong>NASA Langley</strong> (Digital Transformation).</li>
-            </ul>
 
 timezone: America/New_York
